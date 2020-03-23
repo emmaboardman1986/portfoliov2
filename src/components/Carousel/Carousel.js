@@ -11,8 +11,6 @@ export default function Carousel({ children }) {
 
   useEffect(() => {
     if (currentItemIndex === totalItems - 1) {
-    
-      console.log("HELLO?", totalItems);
       setNextItemIndex(0)
     } else {
       setNextItemIndex(currentItemIndex + 1)
