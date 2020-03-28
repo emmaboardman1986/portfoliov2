@@ -32,9 +32,9 @@ const Nav = ({ isMenuExpanded, setIsMenuExpanded }) => {
 }
 
 const NavWrapper = styled.nav`
-  ul {
-    display: flex;
-  }
+  height: 100%;
+  ${breakpoint.md`
+  width: 60%;`}
 `
 
 export default Nav

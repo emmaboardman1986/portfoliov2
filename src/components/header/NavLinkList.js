@@ -28,13 +28,15 @@ const NavLinkListWrapper = styled.ul`
   align-items: center;
   justify-content: center;
   border: 3px solid ${colors.brandSecondary};
+  
   transform: ${props =>
     props.isMenuExpanded ? "translateX(0)" : "translateX(100%)"};
 
   ${breakpoint.xs`
         width: 60vw;
   `}
-  ${breakpoint.sm`
+  ${breakpoint.md`
+    border: 0;
     display: flex;
     transform: translateX(0);
     background-color: ${colors.brandPrimary};
@@ -42,6 +44,7 @@ const NavLinkListWrapper = styled.ul`
     position: relative;
     justify-content: space-between;
     height: 100%;
+    width: 100%;
     overflow: visible;
     transition: none;
     width: initial;

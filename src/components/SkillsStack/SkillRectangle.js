@@ -26,10 +26,10 @@ const SkillRectangleWrapper = styled.div`
     position: relative;
     .rectangle-face {
         position: absolute;
-        top: 27px;
+        top: 20%;
         left: 3px;
-        width: 326px;
-        height: 77px;
+        width: 90%;
+        height: 80%;
         display: flex;
         ${setFlex()};
     }
@@ -37,7 +37,7 @@ const SkillRectangleWrapper = styled.div`
        
     }
     g {
-        fill: ${props => props.color}
+        /* fill: ${props => props.color} */
     }`
 
 export default SkillRectangle;

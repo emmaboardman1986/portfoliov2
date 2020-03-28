@@ -1,25 +1,118 @@
 import styled from "styled-components"
 import React from "react"
-import Heading from "../ui/Heading"
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"
+import Button from "../ui/Button"
 import { setFlex } from "../../utils/alignmentHelpers"
+import * as colors from "../../utils/colors"
+// import SectionContentDataChunkList from "./SectionContentDataChunkList"
+import { breakpoint } from "../../utils/breakpoints"
 
 const SectionContent = ({
-    content=""
+  content = "",
+  link = "",
+  linkText = "",
+  layoutOrder = "",
+  contentType = "",
 }) => {
+  function createMarkup() {
+    return { __html: content }
+  }
   return (
-    <SectionContentWrapper>
-     <p>{content}</p>
+    <SectionContentWrapper layoutOrder={layoutOrder}>
+      {contentType === "data chunk list" ? (
+        <SectionContentDataChunkList
+          dangerouslySetInnerHTML={createMarkup()}
+          layoutOrder={layoutOrder}
+        />
+      ) : contentType === "standard list" ? (
+        <SectionContentStandardList dangerouslySetInnerHTML={createMarkup()} />
+      ) : (
+        <div dangerouslySetInnerHTML={createMarkup()}></div>
+      )}
+      {link && <Button link={link} text={linkText}></Button>}
     </SectionContentWrapper>
   )
 }
 
 const SectionContentWrapper = styled.div`
-display: flex;
-${setFlex()};
+  background-color: ${props =>
+    props.layoutOrder === "even" ? colors.brandPrimary : colors.brandWhite};
+  color: ${colors.brandSecondary};
+  width: 100%;
+  ${breakpoint.md`
+    width: ${props => (props.layoutOrder === "even" ? "60%" : "70%")};
+    `}
+  padding: 1.75rem 4rem;
+  display: flex;
+  flex-direction: column;
+  button {
+    margin-right: ${props => (props.type === "even" ? "7%" : "6%")};
+    align-self: flex-end;
+    min-width: 150px;
+  }
+  p {
+    width: 95%;
+    text-align: justify;
+  }
+  ${setFlex()};
 `
+
+const SectionContentStandardList = styled.div`
+  width: 100%;
+  h4 {
+   
+  }
+  li {
+    a {
+      font-family: "BC-Falster-Grotesk-Regular", Arial;
+      color: ${colors.brandSecondary};
+      text-decoration: none;
+      padding: 0.25rem;
+      padding-left: 0;
+      border-bottom: 1px solid ${colors.brandSecondary};
+    
+      &:hover,
+      &:focus {
+        background-color: ${props =>
+          props.layoutOrder === "even"
+            ? colors.brandWhite
+            : colors.brandPrimary};
+      }
+    }
+    margin-bottom: 2rem;
+    &:last-of-type {
+      margin-bottom: 1.75rem;
+  }
+  p {
+    margin-top: 0.75rem;
+    position: relative;
+    &:before {
+      content: ">";
+      margin-right: 0.5rem;
+    }
+  }
+`
+
+const SectionContentDataChunkList = styled(SectionContentStandardList)`
+  h4 {
+    margin: 1rem;
+    font-family: "BC-Falster-Grotesk-Regular", Arial;
+  }
+  p {
+    &:before {
+      margin-left: 1rem;
+    }
+  }
+`
+
 SectionContent.propTypes = {
-    content: PropTypes.string.isRequired
+  content: PropTypes.string.isRequired,
+  layoutOrder: PropTypes.string.isRequired,
+  contentType: PropTypes.oneOf([
+    "text block",
+    "data chunk list",
+    "standard list",
+  ]),
 }
 
 export default SectionContent

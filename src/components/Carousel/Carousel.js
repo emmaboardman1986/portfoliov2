@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import CarouselControl from "./CarouselControl"
+import { breakpoint } from "../../utils/breakpoints"
 
-export default function Carousel({ children }) {
+const Carousel = ({ children }) => {
   const totalItems = children.length
   const [currentItemIndex, setCurrentItemIndex] = useState(0)
   const [prevItemIndex, setPrevItemIndex] = useState(totalItems - 1)
@@ -17,10 +18,10 @@ export default function Carousel({ children }) {
     }
     // If it's the first slide, set as the last slide, else -1
     if (currentItemIndex === 0) {
-        setPrevItemIndex(totalItems - 1);
-      } else {
-        setPrevItemIndex(currentItemIndex - 1)
-      }
+      setPrevItemIndex(totalItems - 1)
+    } else {
+      setPrevItemIndex(currentItemIndex - 1)
+    }
   }, [currentItemIndex])
 
   return (
@@ -48,9 +49,7 @@ export default function Carousel({ children }) {
         direction="next"
         onClick={() =>
           setCurrentItemIndex(
-            currentItemIndex >= children.length - 1
-              ? 0
-              : currentItemIndex + 1
+            currentItemIndex >= children.length - 1 ? 0 : currentItemIndex + 1
           )
         }
       >
@@ -80,11 +79,13 @@ Carousel.propTypes = {
 
 const CarouselWrapper = styled.div`
   overflow: hidden;
-  width: 90%;
   position: relative;
-  * {
-    box-sizing: border-box;
-  }
+  padding: 1rem;
+  ${breakpoint.sm`
+   padding: 5rem 10rem;`}
+  ${breakpoint.md`
+    display: none;
+  `}
 `
 
 const CarouselMain = styled.div`
@@ -97,9 +98,10 @@ const CarouselItemWrapper = styled.div`
   top: 0;
   width: 100%;
   margin: auto;
-  padding: 1rem 4rem;
+  padding: 1rem;
   z-index: 100;
   transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+  box-sizing: border-box;
   &.active,
   &.initial {
     opacity: 1;
@@ -113,3 +115,5 @@ const CarouselItemWrapper = styled.div`
       props.direction === "next" ? "translateX(100%)" : "translateX(-100%)"};
   }
 `
+
+export default Carousel

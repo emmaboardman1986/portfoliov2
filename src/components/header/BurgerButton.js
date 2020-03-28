@@ -30,7 +30,7 @@ const BurgerButtonWrapper = styled.button`
   height: 50px;
   border: 0;
   width: 57px;
-  margin-right: 3px;
+  margin: 0.3rem;
   &:focus {
     outline: none;
     box-shadow: 0 0 0 5px #ffd29d;
@@ -70,7 +70,7 @@ const BurgerButtonWrapper = styled.button`
       }
     }
   }
-  ${breakpoint.sm`
+  ${breakpoint.md`
     display: none;`}
 `
 

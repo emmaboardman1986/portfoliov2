@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import SkillRectangle from "./SkillRectangle"
 import styled from "styled-components"
+import { breakpoint } from "../../utils/breakpoints"
 
 const SkillsStack = ({ skills, color }) => {
   return (
@@ -18,15 +19,17 @@ SkillsStack.propTypes = {
 }
 
 const SkillsStackWrapper = styled.div`
+  ${breakpoint.md`
+  display: inline-block;`}
   div {
     position: relative;
     :nth-child(1) {
       z-index: 3;
-      margin-bottom: -32px;
+      margin-bottom: -10%;
     }
     :nth-child(2) {
       z-index: 2;
-      margin-bottom: -33px;
+      margin-bottom: -10%;
     }
     :nth-child(3) {
       z-index: 1;
