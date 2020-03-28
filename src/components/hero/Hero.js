@@ -11,20 +11,51 @@ const HeroWrapper = styled.div`
   ${breakpoint.md`
     display: flex;
     padding: 3rem 2rem;
-    div {
+    padding-top: 10rem;
+    margin-left: 4rem;
     position: relative;
-    :nth-child(1) {
+    .skills-stack:nth-of-type(1) {
       z-index: 3;
-      margin-bottom: -10%;
+      p {
+        font-size: 1.5rem;
+      }
     }
-    :nth-child(2) {
+    .skills-stack:nth-of-type(2) {
       z-index: 2;
-      margin-bottom: -10%;
+      margin-left: -2rem;
+      margin-top: -3rem;
+      p {
+        font-size: 1.25rem;
+        width: 95%;
+      }
+      svg {
+        width: 95%;
+      }
+      span {
+        font-size: 1.20rem;
+      }
+      .rectangle-face {
+        width: 85%;
+      }
     }
-    :nth-child(3) {
+    .skills-stack:nth-of-type(3) {
       z-index: 1;
+      margin-left: -3rem;
+      margin-top: -6rem;
+      p {
+        font-size: 1rem;
+        width: 85%;
+      }
+      svg {
+        width: 85%;
+      }
+      span {
+        font-size: 1.10rem;
+      }
+      .rectangle-face {
+        width: 75%;
+      }
     }
-  }
     `}
 `
 

@@ -19,7 +19,7 @@ const CarouselControlWrapper = styled.button`
   width: 3rem;
   height: 3rem;
   background-color: #fff;
-  transform: translateY(-50%);
+  /* transform: translateY(5%); */
   border-radius: 50%;
   cursor: pointer;
   z-index: 100; /* Sit on top of everything */

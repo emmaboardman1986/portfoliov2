@@ -1,25 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import SkillRectangleSVG from '../../../static/assets/skillRectangle.svg'
+import React from "react"
+import PropTypes from "prop-types"
+import SkillRectangleSVG from "../../../static/assets/skillRectangle.svg"
 import styled from "styled-components"
-import { setFlex} from "../../utils/alignmentHelpers"
-
+import { setFlex } from "../../utils/alignmentHelpers"
 
 const SkillRectangle = ({ skill }) => {
-    return (
+  return (
     <SkillRectangleWrapper>
-        <SkillRectangleSVG />
-        <div className="rectangle-face">
+      <SkillRectangleSVG />
+      <div className="rectangle-face">
         <span>{skill}</span>
-        </div>
-       
+      </div>
     </SkillRectangleWrapper>
-    )
+  )
 }
 
 SkillRectangle.propTypes = {
-   
-    text: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 }
 
 const SkillRectangleWrapper = styled.div`
@@ -40,4 +37,4 @@ const SkillRectangleWrapper = styled.div`
         /* fill: ${props => props.color} */
     }`
 
-export default SkillRectangle;
+export default SkillRectangle

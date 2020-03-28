@@ -3,7 +3,7 @@ import Layout from "../components/ui/layout"
 import Section from "../components/sectionBanner/Section"
 import Carousel from "../components/Carousel/Carousel"
 import SkillsStack from "../components/SkillsStack/SkillsStack"
-import Hero from "../components/Hero/Hero"
+import Hero from "../components/hero/Hero"
 import * as colors from "../utils/colors"
 
 export default () => {
@@ -49,14 +49,14 @@ export default () => {
   return (
     <Layout>
       <Carousel>
-        <SkillsStack color={colors.limeMedium} skills={dailyUseSkills} />
-        <SkillsStack color={colors.lilacMedium} skills={sideProjectSkills} />
-        <SkillsStack color={colors.blueMedium} skills={wipSkills} />
+        <SkillsStack color={colors.limeMedium} skills={dailyUseSkills} skillAnnotation="Day to Day"/>
+        <SkillsStack color={colors.lilacMedium} skills={sideProjectSkills} skillAnnotation="Side Projects" />
+        <SkillsStack color={colors.blueMedium} skills={wipSkills} skillAnnotation="Work in Progress"/>
       </Carousel>
       <Hero>
-        <SkillsStack color={colors.limeMedium} skills={dailyUseSkills} />
-        <SkillsStack color={colors.lilacMedium} skills={sideProjectSkills} />
-        <SkillsStack color={colors.blueMedium} skills={wipSkills} />
+        <SkillsStack color={colors.limeMedium} skills={dailyUseSkills} skillAnnotation="Day to Day" />
+        <SkillsStack color={colors.lilacMedium} skills={sideProjectSkills} skillAnnotation="Side Projects"  />
+        <SkillsStack color={colors.blueMedium} skills={wipSkills} skillAnnotation="Work in Progress"/>
       </Hero>
 
       {sectionContent.map((section, index) => (

@@ -27,7 +27,9 @@ const SectionContent = ({
       ) : contentType === "standard list" ? (
         <SectionContentStandardList dangerouslySetInnerHTML={createMarkup()} />
       ) : (
-        <div dangerouslySetInnerHTML={createMarkup()}></div>
+        <SectionContentTextBlock
+          dangerouslySetInnerHTML={createMarkup()}
+        ></SectionContentTextBlock>
       )}
       {link && <Button link={link} text={linkText}></Button>}
     </SectionContentWrapper>
@@ -35,33 +37,46 @@ const SectionContent = ({
 }
 
 const SectionContentWrapper = styled.div`
+  box-sizing: border-box;
   background-color: ${props =>
     props.layoutOrder === "even" ? colors.brandPrimary : colors.brandWhite};
   color: ${colors.brandSecondary};
   width: 100%;
-  ${breakpoint.md`
-    width: ${props => (props.layoutOrder === "even" ? "60%" : "70%")};
-    `}
-  padding: 1.75rem 4rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   button {
-    margin-right: ${props => (props.type === "even" ? "7%" : "6%")};
+  
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    ${breakpoint.md`
     align-self: flex-end;
+    margin: 0;
+    margin-right: ${props => (props.type === "even" ? "7%" : "6%")};
+    `}
+
     min-width: 150px;
   }
   p {
-    width: 95%;
-    text-align: justify;
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
   ${setFlex()};
+  ${breakpoint.md`
+    width: ${props => (props.layoutOrder === "even" ? "60%" : "70%")};
+    padding: 1.75rem 4rem;
+    p {
+      text-align: justify;
+      width: 95%;
+    }
+    `}
 `
+
+const SectionContentTextBlock = styled.div``
 
 const SectionContentStandardList = styled.div`
   width: 100%;
-  h4 {
-   
-  }
+
   li {
     a {
       font-family: "BC-Falster-Grotesk-Regular", Arial;
@@ -84,7 +99,7 @@ const SectionContentStandardList = styled.div`
       margin-bottom: 1.75rem;
   }
   p {
-    margin-top: 0.75rem;
+    text-align: left;
     position: relative;
     &:before {
       content: ">";

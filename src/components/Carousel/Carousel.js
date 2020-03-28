@@ -81,6 +81,10 @@ const CarouselWrapper = styled.div`
   overflow: hidden;
   position: relative;
   padding: 1rem;
+  p {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+  }
   ${breakpoint.sm`
    padding: 5rem 10rem;`}
   ${breakpoint.md`

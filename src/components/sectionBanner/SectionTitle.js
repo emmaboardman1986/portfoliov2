@@ -15,9 +15,11 @@ const SectionTitle = ({ title = "", layoutOrder = "" }) => {
 }
 
 const SectionTitleWrapper = styled.div`
+    box-sizing: border-box;
     background-color: ${colors.brandSecondary};
     color: ${colors.brandPrimary};
     width: 100%;
+    padding: 1.5rem;
     ${breakpoint.md`
         width: ${props => (props.layoutOrder === "even" ? "40%" : "30%")};
         background-color: ${props =>

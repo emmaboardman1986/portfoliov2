@@ -1,15 +1,19 @@
 import React from "react"
 import PropTypes from "prop-types"
 import SkillRectangle from "./SkillRectangle"
+import SkillsAnnotation from "./SkillsAnnotation"
 import styled from "styled-components"
 import { breakpoint } from "../../utils/breakpoints"
 
-const SkillsStack = ({ skills, color }) => {
+const SkillsStack = ({ skills, color, skillAnnotation }) => {
   return (
-    <SkillsStackWrapper color={color}>
-      {skills.map((skill, index) => (
-        <SkillRectangle key={index} skill={skill}></SkillRectangle>
-      ))}
+    <SkillsStackWrapper className="skills-stack">
+      <SkillsAnnotation skillAnnotation={skillAnnotation} />
+      <SkillsStackStack color={color}>
+        {skills.map((skill, index) => (
+          <SkillRectangle key={index} skill={skill}></SkillRectangle>
+        ))}
+      </SkillsStackStack>
     </SkillsStackWrapper>
   )
 }
@@ -19,6 +23,12 @@ SkillsStack.propTypes = {
 }
 
 const SkillsStackWrapper = styled.div`
+ ${breakpoint.md`
+  display: flex;
+  flex: 1;
+  flex-direction: column;`}
+`
+const SkillsStackStack = styled.div`
   ${breakpoint.md`
   display: inline-block;`}
   div {
