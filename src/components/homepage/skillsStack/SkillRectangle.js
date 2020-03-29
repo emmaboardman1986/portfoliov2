@@ -1,7 +1,7 @@
-import React from "./node_modules/react"
-import PropTypes from "./node_modules/prop-types"
+import React from "react"
+import PropTypes from "prop-types"
 import SkillRectangleSVG from "../../../static/assets/skillRectangle.svg"
-import styled from "./node_modules/styled-components"
+import styled from "styled-components"
 import { setFlex } from "../../../utils/alignmentHelpers"
 
 const SkillRectangle = ({ skill }) => {

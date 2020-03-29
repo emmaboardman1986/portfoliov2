@@ -1,8 +1,8 @@
-import React from "./node_modules/react"
-import PropTypes from "./node_modules/prop-types"
+import React from "react"
+import PropTypes from "prop-types"
 import SkillRectangle from "./SkillRectangle"
 import SkillsAnnotation from "./SkillsAnnotation"
-import styled from "./node_modules/styled-components"
+import styled from "styled-components"
 import { breakpoint } from "../../../utils/breakpoints"
 
 const SkillsStack = ({ skills, color, skillAnnotation }) => {

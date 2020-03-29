@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/ui/layout"
 import Section from "../components/sectionBanner/Section"
-import Carousel from "../components/Carousel/Carousel"
-import SkillsStack from "../components/SkillsStack/SkillsStack"
+import Carousel from "../components/homepage/carousel/Carousel"
+import SkillsStack from "../components/homepage/skillsStack/SkillsStack"
 import Hero from "../components/hero/Hero"
 import * as colors from "../utils/colors"
 

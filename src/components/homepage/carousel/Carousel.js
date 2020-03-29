@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import CarouselControl from "./CarouselControl"
-import { breakpoint } from "../../utils/breakpoints"
+import { breakpoint } from "../../../utils/breakpoints"
 
 const Carousel = ({ children }) => {
   const totalItems = children.length
