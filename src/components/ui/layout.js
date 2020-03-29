@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
       />
 
       <main>{children}</main>
-      <footer></footer>
+      <footer>© 2020 Emma Boardman</footer>
     </>
   )
 }

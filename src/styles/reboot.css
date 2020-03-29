@@ -23,3 +23,15 @@ main {
     margin-top: 1rem;
   }
 }
+
+
+footer {
+  background-color: #00103e;
+  height: 8vh;
+  color: #fff;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  font-family: "Roboto-Mono-Regular", Arial;
+}
