@@ -1,0 +1,12 @@
+[
+  {
+    "slug" : "dissertation",
+    "title": "title 1",
+    "challenge": "challenge 1"
+  },
+  {
+    "slug": "older project",
+    "title": "title 2",
+    "challenge": "challenge 2"
+  }
+]

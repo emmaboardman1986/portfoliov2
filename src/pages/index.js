@@ -3,7 +3,7 @@ import Layout from "../components/ui/layout"
 import Section from "../components/sectionBanner/Section"
 import Carousel from "../components/homepage/carousel/Carousel"
 import SkillsStack from "../components/homepage/skillsStack/SkillsStack"
-import Hero from "../components/hero/Hero"
+import Hero from "../components/homepage/hero/Hero"
 import * as colors from "../utils/colors"
 
 export default () => {
