@@ -1,2 +1,12 @@
-// Top nav
-// Content Sections (4, can decide on names later)
+import React from "react"
+import Layout from "../components/ui/layout"
+import ProjectFixedHeader from "../components/projects/ProjectFixedHeader"
+
+export default () => {
+
+  return (
+    <Layout>
+      <ProjectFixedHeader />
+    </Layout>
+  )
+}

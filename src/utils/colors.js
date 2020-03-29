@@ -4,7 +4,9 @@ export const brandPrimary = peachLight
 
 // Secondary / Navy
 export const navyMedium = '#001759'
+export const navyDark = '#00103e'
 export const brandSecondary = navyMedium
+export const brandSecondaryDark = navyDark
 export const brandBody = navyMedium
 
 // Accents 

@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import SkillRectangleSVG from "../../../static/assets/skillRectangle.svg"
+import SkillRectangleSVG from "../../../../static/assets/skillRectangle.svg"
 import styled from "styled-components"
 import { setFlex } from "../../../utils/alignmentHelpers"
 
