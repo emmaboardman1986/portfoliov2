@@ -7,10 +7,10 @@ import ProjectNav from "../../components/projects/ProjectNav"
 import ProjectTitle from "../../components/projects/ProjectTitle"
 
 
-const ProjectFixedHeader = () => {
+const ProjectFixedHeader = ({title}) => {
   return (
     <ProjectFixedHeaderWrapper>
-     <ProjectTitle />
+     <ProjectTitle title={title}/>
      <ProjectNav />
     </ProjectFixedHeaderWrapper>
   )
@@ -19,6 +19,7 @@ const ProjectFixedHeader = () => {
 const ProjectFixedHeaderWrapper = styled.div`
   position: fixed;
   top: 15vh;
+  height: 16vh;
   left: 0;
   width: 100%;
   z-index: 999;

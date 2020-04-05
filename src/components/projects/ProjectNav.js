@@ -10,16 +10,16 @@ const ProjectNav = () => {
     <ProjectNavWrapper>
       <ProjectNavList>
         <ProjectNavListItem>
-          <Link>Challenge</Link>
+          <Link>Overview</Link>
         </ProjectNavListItem>
         <ProjectNavListItem>
           <Link>UX</Link>
         </ProjectNavListItem>
         <ProjectNavListItem>
-          <Link>Acessbility</Link>
+          <Link>A11y</Link>
         </ProjectNavListItem>
         <ProjectNavListItem>
-          <Link>Solution</Link>
+          <Link>Result</Link>
         </ProjectNavListItem>
       </ProjectNavList>
     </ProjectNavWrapper>
@@ -29,6 +29,7 @@ const ProjectNav = () => {
 const ProjectNavWrapper = styled.div`
   background-color: ${colors.brandPrimary};
   border-bottom: 2px solid ${colors.brandSecondary};
+  height: fit-content;
 `
 
 const ProjectNavList = styled.ul`
@@ -41,10 +42,12 @@ const ProjectNavListItem = styled.li`
   &:not(:first-of-type) {
     border-left: 2px solid ${colors.brandSecondary};
   }
+  
   width: 100%;
   display: flex;
   ${setFlex()};
   padding: 1rem;
+  box-sizing: border-box;
 
   a {
     font-family: "Roboto-Mono-Regular", Arial;

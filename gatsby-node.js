@@ -8,9 +8,13 @@ exports.createPages = async ({ graphql, actions }) => {
       allProjectsJson {
         edges {
           node {
-            title
-            challenge
             slug
+            title
+            overviewtldr
+            overview
+            ux
+            a11y
+            result
           }
         }
       }
@@ -27,6 +31,13 @@ exports.createPages = async ({ graphql, actions }) => {
         slug: node.slug,
         title: node.title,
         challenge: node.challenge,
+        slug: node.slug,
+        title: node.title,
+        overviewtldr: node.overviewtldr,
+        overview: node.overview,
+        ux: node.ux,
+        a11y: node.a11y,
+        result: node.result
       },
     })
   })

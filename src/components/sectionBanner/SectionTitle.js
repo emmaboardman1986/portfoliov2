@@ -9,7 +9,7 @@ import * as colors from "../../utils/colors"
 const SectionTitle = ({ title = "", layoutOrder = "" }) => {
   return (
     <SectionTitleWrapper layoutOrder={layoutOrder}>
-      <Heading variant="h3" text={title} />
+      <Heading variant="h2" text={title} />
     </SectionTitleWrapper>
   )
 }

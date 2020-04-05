@@ -10,9 +10,9 @@ import { Link } from "gatsby"
 const HeaderLogo = () => {
   return (
     <HeaderLogoWrapper>
-      <Link to="index">
-        <Heading text="Emma Boardman"></Heading>
-        <Heading variant="h2" text="UX & front-end development"></Heading>
+      <Link to="/">
+        <HeaderLogoMainText>Emma Boardman</HeaderLogoMainText>
+        <HeaderLogoSubTitle>UX & front-end development</HeaderLogoSubTitle>
       </Link>
     </HeaderLogoWrapper>
   )
@@ -29,19 +29,32 @@ const HeaderLogoWrapper = styled.div`
       color: #00103e;
     }
   }
-  
   display: flex;
   justify-content: center;
   flex-direction: column;
-  h1 {
-    padding-bottom: 0.75rem;
-  }
   ${breakpoint.md`
     padding-left: 2.2rem;
-    h1 {
-    padding-bottom: 1rem;
-  }
   `}
 `
+
+const HeaderLogoMainText = styled.p`
+  font-family: "BC-Falster-Grotesk-Regular", Arial;
+  text-rendering: optimizeLegibility;
+  font-size: 1.4rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  padding-bottom: 0.75rem;
+  font-weight: bold;
+  ${breakpoint.md`
+  font-size: 1.6rem;
+  padding-bottom: 1rem;`}
+`
+
+const HeaderLogoSubTitle = styled(HeaderLogoMainText)`
+ font-size: 1rem;
+ font-weight: normal;
+ ${breakpoint.md`
+  font-size: 1.2rem;`}
+  `
 
 export default HeaderLogo

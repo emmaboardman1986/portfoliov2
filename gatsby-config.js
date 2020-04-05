@@ -20,9 +20,7 @@ module.exports = {
       options: {
         name: `projects`,
         path: `${__dirname}/src/data/`,
-        plugins: [
-          `gatsby-transformer-json`
-        ]
+        plugins: [`gatsby-transformer-json`],
       },
     },
     {
@@ -31,6 +29,13 @@ module.exports = {
         rule: {
           include: /assets/,
         },
+      },
+    },
+    {
+      resolve: "@weknow/gatsby-remark-codepen",
+      options: {
+        theme: "dark",
+        height: 400,
       },
     },
   ],
