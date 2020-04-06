@@ -2,7 +2,6 @@ import styled from "styled-components"
 import React from "react"
 import * as colors from "../../utils/colors"
 import { breakpoint } from "../../utils/breakpoints"
-import PropTypes from "prop-types"
 
 const BurgerButton = ({ isMenuExpanded, setIsMenuExpanded }) => {
   return (

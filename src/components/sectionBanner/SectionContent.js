@@ -58,7 +58,7 @@ const SectionContentWrapper = styled.div`
     min-width: 150px;
   }
   p {
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 1.5rem;
   }
   ${setFlex()};
@@ -109,7 +109,7 @@ const SectionContentStandardList = styled.div`
 `
 
 const SectionContentDataChunkList = styled(SectionContentStandardList)`
-  h4 {
+  h3 {
     margin: 1rem;
     font-family: "BC-Falster-Grotesk-Regular", Arial;
   }

@@ -18,13 +18,13 @@ const Nav = ({ isMenuExpanded, setIsMenuExpanded }) => {
           <Link to="/projects">Projects</Link>
         </NavLinkListItem>
         <NavLinkListItem>
-          <Link to="/projects">About</Link>
+          <Link to="/about">About</Link>
         </NavLinkListItem>
         <NavLinkListItem>
-          <Link to="/projects">Blog</Link>
+          <Link to="/blog">Blog</Link>
         </NavLinkListItem>
         <NavLinkListItem>
-          <Link to="/projects">Contact</Link>
+          <Link to="/#contact">Contact</Link>
         </NavLinkListItem>
       </NavLinkList>
     </NavWrapper>

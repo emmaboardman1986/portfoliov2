@@ -4,7 +4,6 @@ import SectionTitle from "./SectionTitle"
 import SectionContent from "./SectionContent"
 import * as colors from "../../utils/colors"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import { breakpoint } from "../../utils/breakpoints"
 
 const Section = ({
@@ -16,7 +15,7 @@ const Section = ({
   contentType = "",
 }) => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id={title.toLowerCase()}>
       <SectionTitle title={title} layoutOrder={layoutOrder} />
       <SectionContent
         content={content}

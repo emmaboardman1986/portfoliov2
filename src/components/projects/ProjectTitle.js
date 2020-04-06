@@ -9,7 +9,7 @@ import Heading from "../ui/Heading"
 const ProjectTitle = ({title}) => {
   return (
     <ProjectTitleWrapper>
-      <Link>Projects</Link> >  <Heading variant="h1" text={title}></Heading>
+      <Link to="/projects">Projects</Link> >  <Heading variant="h1" text={title}></Heading>
     </ProjectTitleWrapper>
   )
 }
@@ -25,6 +25,8 @@ const ProjectTitleWrapper = styled.div`
   h1 {
     font-size: 0.95rem;
     margin: 0.5rem;
+    padding: 0;
+    
     color: ${colors.brandSecondaryDark};
   }
   a {

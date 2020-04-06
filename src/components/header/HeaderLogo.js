@@ -1,8 +1,5 @@
 import styled from "styled-components"
 import React from "react"
-import Heading from "../ui/Heading"
-import { setSharedPadding } from "../../utils/spacingHelpers"
-import { setFlex } from "../../utils/alignmentHelpers"
 import { breakpoint } from "../../utils/breakpoints"
 import * as colors from "../../utils/colors"
 import { Link } from "gatsby"

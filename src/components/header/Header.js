@@ -4,7 +4,6 @@ import Nav from "./Nav"
 import HeaderLogo from "./HeaderLogo"
 import * as colors from "../../utils/colors"
 import { setFlex } from "../../utils/alignmentHelpers"
-import { setSharedPadding } from "../../utils/spacingHelpers"
 import { breakpoint } from "../../utils/breakpoints"
 
 const Header = ({isMenuExpanded, setIsMenuExpanded}) => {

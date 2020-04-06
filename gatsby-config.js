@@ -24,6 +24,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/pages/blog`,
+        plugins: [`gatsby-transformer-json`],
+      },
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
@@ -38,5 +46,6 @@ module.exports = {
         height: 400,
       },
     },
+    `gatsby-transformer-remark`,
   ],
 }

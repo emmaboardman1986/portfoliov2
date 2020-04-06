@@ -15,7 +15,7 @@ export default () => {
     {
       sectionTitle: "About",
       sectionContent:
-        "<p>Hi! I’m Emma, a front-end developer with a passion for UX and a commitment to accessibility.</p><p>I began my professional life as a Japanese translator & interpreter. Seeking new challenges, I moved into tech in 2016.</p><p>I currently work for a fintech start-up in Edinburgh, Scotland. My team are responsible for building bespoke client sites for our white-label platform, and rebuilding our back-office UI in React.</p>",
+        "<p>Hi! I’m Emma, a front-end developer with a passion for UX and a commitment to accessibility.</p><p>I began my professional life as a Japanese translator & interpreter. Seeking new challenges, I moved into tech in 2016.</p><p>I currently work for a fintech start-up in Edinburgh, Scotland. My team are responsible for building bespoke client sites for our white-label investment platform, and rebuilding our back-office UI in React.</p>",
       sectionLink: "about",
       sectionLinkText: "Read more",
       sectionContentType: "text block",
@@ -31,7 +31,7 @@ export default () => {
     {
       sectionTitle: "Blog",
       sectionContent:
-        "<ul><li><h4><a href='#'>Project Title</a></h4><p>Project Skill, Project Skill, Project Skill</p></li><li><h4><a href='#'>Project Title</a></h4><p>Project Skill, Project Skill, Project Skill</p></li></ul>",
+        "<ul><li><h3><a href='/blog'>Accessible Accordions</a></h3><p>Accessibility, Semantic HTML, Vanilla JS, React</p></li><li><h3><a href='#'>Project Title</a></h3><p>Project Skill, Project Skill, Project Skill</p></li></ul>",
       sectionLink: "blog",
       sectionLinkText: "See all",
       sectionContentType: "data chunk list",
@@ -63,7 +63,7 @@ export default () => {
       {sectionContent.map((section, index) => (
         <Section
           key={index}
-          layoutOrder={index % 2 == 0 ? "even" : "odd"}
+          layoutOrder={index % 2 === 0 ? "even" : "odd"}
           title={section.sectionTitle}
           content={section.sectionContent}
           contentType={section.sectionContentType}

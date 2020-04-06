@@ -22,7 +22,7 @@ const Carousel = ({ children }) => {
     } else {
       setPrevItemIndex(currentItemIndex - 1)
     }
-  }, [currentItemIndex])
+  }, [currentItemIndex, totalItems])
 
   return (
     <CarouselWrapper>

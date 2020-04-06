@@ -1,7 +1,5 @@
 import styled from "styled-components"
 import React from "react"
-import * as colors from "../../utils/colors"
-import { setFlex } from "../../utils/alignmentHelpers"
 import { breakpoint } from "../../utils/breakpoints"
 import ProjectNav from "../../components/projects/ProjectNav"
 import ProjectTitle from "../../components/projects/ProjectTitle"

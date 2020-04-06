@@ -33,7 +33,7 @@ export default ({ data }) => {
           ></ProjectUX>
         </ProjectSection>
         <ProjectSection>
-          <Heading variant="h2" text="Accessibility (A11y)"></Heading>
+          <Heading variant="h2" text="Accessibility"></Heading>
           <ProjectA11y
             dangerouslySetInnerHTML={createMarkup(project.a11y)}
           ></ProjectA11y>
