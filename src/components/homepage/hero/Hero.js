@@ -57,6 +57,11 @@ const HeroWrapper = styled.div`
       }
     }
     `}
+    ${breakpoint.lg`
+     max-width: 70%;
+     margin-left: auto;
+     margin-right: auto;
+     `}
 `
 
 export default Hero

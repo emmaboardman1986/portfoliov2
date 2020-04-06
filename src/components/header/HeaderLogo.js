@@ -26,6 +26,9 @@ const HeaderLogoWrapper = styled.div`
       color: #00103e;
     }
   }
+  p:last-of-type {
+    padding-bottom: 0;
+  }
   display: flex;
   justify-content: center;
   flex-direction: column;

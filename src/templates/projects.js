@@ -112,16 +112,16 @@ const ProjectOverviewTLDR = styled(ProjectContentBlock)`
     margin-top: 0;
   }
   margin-top: 1.15rem;
-  background-color: ${colors.brandSecondary};
-  color: ${colors.brandPrimary};
+  background-color: ${colors.brandPrimary};
+  color: ${colors.brandBlack};
   padding: 1rem;
   margin: 0.5rem;
-  border-radius: 3px;
+  border-radius: 6px;
   border: dashed 1px ${colors.brandPrimary};
   h3 {
     padding: 1rem 0;
     font-size: 1.15rem;
-    color: ${colors.brandWhite};
+    color: ${colors.brandBlack};
   }
   ul {
     padding-left: 1rem;
@@ -131,7 +131,7 @@ const ProjectOverviewTLDR = styled(ProjectContentBlock)`
     line-height: 1.5rem;
   }
   a {
-    color: ${colors.brandPrimary};
+    color: ${colors.brandSecondaryDark};
   }
 `
 

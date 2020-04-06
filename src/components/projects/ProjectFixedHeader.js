@@ -25,8 +25,6 @@ const ProjectFixedHeaderWrapper = styled.div`
   left: 0;
   width: 100%;
   z-index: 999;
-  ${breakpoint.md`
-  top: 18vh;`}
 `
 
 export default ProjectFixedHeader

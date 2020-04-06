@@ -27,7 +27,6 @@ const HeaderWrapper = styled.header`
   ${setFlex({x: "space-between", y: "center"})};
   ${breakpoint.md`
     position: relative;
-    height: 18vh;
   `}
 `
 
