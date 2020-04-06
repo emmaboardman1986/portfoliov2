@@ -4,12 +4,16 @@ import { breakpoint } from "../../utils/breakpoints"
 import ProjectNav from "../../components/projects/ProjectNav"
 import ProjectTitle from "../../components/projects/ProjectTitle"
 
-
-const ProjectFixedHeader = ({title}) => {
+const ProjectFixedHeader = ({ title, isOverviewInViewPort, isUXInViewPort, isA11yInViewPort, isResultInViewPort }) => {
   return (
     <ProjectFixedHeaderWrapper>
-     <ProjectTitle title={title}/>
-     <ProjectNav />
+      <ProjectTitle title={title} />
+      <ProjectNav
+        isOverviewInViewPort={isOverviewInViewPort}
+        isUXInViewPort={isUXInViewPort}
+        isA11yInViewPort={isA11yInViewPort}
+        isResultInViewPort={isResultInViewPort}
+      />
     </ProjectFixedHeaderWrapper>
   )
 }

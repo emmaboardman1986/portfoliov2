@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Layout from "../components/ui/layout"
 import ProjectFixedHeader from "../components/projects/ProjectFixedHeader"
 import Heading from "../components/ui/Heading"
@@ -6,18 +6,37 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import * as colors from "../utils/colors"
 import { setFlex } from "../utils/alignmentHelpers"
+import { useIsInViewport } from "../utils/customHooks/useIsInViewport"
 
 export default ({ data }) => {
   const project = data.projectsJson
+  // isVisible functionality
+  const overviewEl = useRef()
+  const uxEl = useRef()
+  const a11yEl = useRef()
+  const resultEl = useRef()
+  // const isOverviewInViewPort = useIsInViewport({element: overviewEl});
+  const isOverviewInViewPort = useIsInViewport({ element: overviewEl })
+  const isUXInViewPort = useIsInViewport({ element: uxEl })
+  const isA11yInViewPort = useIsInViewport({ element: a11yEl })
+  const isResultInViewPort = useIsInViewport({ element: resultEl })
 
   function createMarkup(content) {
     return { __html: content }
   }
+
   return (
     <Layout>
-      <ProjectFixedHeader title={project.title} />
+      <ProjectFixedHeader
+        title={project.title}
+        isOverviewInViewPort={isOverviewInViewPort}
+        isUXInViewPort={isUXInViewPort}
+        isA11yInViewPort={isA11yInViewPort}
+        isResultInViewPort={isResultInViewPort}
+      />
       <ProjectMain>
-        <ProjectSection>
+        <AnchorSpacingSpan id="overview"></AnchorSpacingSpan>
+        <ProjectSection ref={overviewEl}>
           <Heading variant="h2" text="Overview"></Heading>
           <ProjectOverviewTLDR
             dangerouslySetInnerHTML={createMarkup(project.overviewtldr)}
@@ -26,19 +45,22 @@ export default ({ data }) => {
             dangerouslySetInnerHTML={createMarkup(project.overview)}
           ></ProjectOverview>
         </ProjectSection>
-        <ProjectSection>
+        <AnchorSpacingSpan id="ux"></AnchorSpacingSpan>
+        <ProjectSection ref={uxEl}>
           <Heading variant="h2" text="UX"></Heading>
           <ProjectUX
             dangerouslySetInnerHTML={createMarkup(project.ux)}
           ></ProjectUX>
         </ProjectSection>
-        <ProjectSection>
+        <AnchorSpacingSpan id="a11y"></AnchorSpacingSpan>
+        <ProjectSection ref={a11yEl}>
           <Heading variant="h2" text="Accessibility"></Heading>
           <ProjectA11y
             dangerouslySetInnerHTML={createMarkup(project.a11y)}
           ></ProjectA11y>
         </ProjectSection>
-        <ProjectSection>
+        <AnchorSpacingSpan id="result"></AnchorSpacingSpan>
+        <ProjectSection ref={resultEl}>
           <Heading variant="h2" text="Result"></Heading>
           <ProjectResult
             dangerouslySetInnerHTML={createMarkup(project.result)}
@@ -57,11 +79,17 @@ const ProjectMain = styled.main`
   ${setFlex()};
 `
 
+const AnchorSpacingSpan = styled.span`
+  height: 31vh;
+  margin-top: -31vh;
+  visibility: hidden;
+`
+
 const ProjectSection = styled.section`
-display: flex;
-flex-direction: column;
-padding: 1rem 0;
-margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  margin-bottom: 0.5rem;
   h2 {
     padding-bottom: 0.25rem;
     font-size: 1.5rem;
@@ -71,9 +99,7 @@ margin-bottom: 0.5rem;
   }
 `
 
-const ProjectContentBlock = styled.div`
-
-`
+const ProjectContentBlock = styled.div``
 
 const ProjectOverview = styled(ProjectContentBlock)`
   h2 {
@@ -109,12 +135,9 @@ const ProjectOverviewTLDR = styled(ProjectContentBlock)`
   }
 `
 
-const ProjectUX = styled(ProjectContentBlock)`
-`
-const ProjectA11y = styled(ProjectContentBlock)`
-`
-const ProjectResult = styled(ProjectContentBlock)`
-`
+const ProjectUX = styled(ProjectContentBlock)``
+const ProjectA11y = styled(ProjectContentBlock)``
+const ProjectResult = styled(ProjectContentBlock)``
 
 export const query = graphql`
   query($slug: String!) {
