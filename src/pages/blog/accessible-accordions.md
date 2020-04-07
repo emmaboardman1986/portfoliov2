@@ -9,7 +9,7 @@ tags: "Accessibility, Semantic HTML, Vanilla JS, React"
 My explorations into building an accessible accordion. First in HTML & Vanilla ES6, then again in React.
 
 * <a href="https://codesandbox.io/s/accessible-accordion-vanilla-6sk0w" target="_blank">HTML & ES6 CodeSandbox</a>
-* <a href="https://codesandbox.io/s/react-accordion-using-react-hooks-9uuvc" target="_blank">React CodeSandbox</a>
+* <a href="https://codesandbox.io/s/accessible-accordion-react-uew6n" target="_blank">React CodeSandbox</a>
 
 > The internet is full of wonderful articles on accessible accordions (many of which are referenced in this blog post). This post does not attempt to reinvent the wheel, it is my personal exploration of what is required to make the key components of the web inclusive and accessible. 
 
@@ -107,4 +107,4 @@ The `aria-expanded` tells screen reader users that there is optional content to 
 ##Results 
 
 * <a href="https://codesandbox.io/s/accessible-accordion-vanilla-6sk0w" target="_blank">HTML & ES6 CodeSandbox</a>
-* <a href="https://codesandbox.io/s/react-accordion-using-react-hooks-9uuvc" target="_blank">React CodeSandbox</a>
+* <a href="https://codesandbox.io/s/accessible-accordion-react-uew6n" target="_blank">React CodeSandbox</a>
