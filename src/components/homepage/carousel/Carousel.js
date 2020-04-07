@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import CarouselControl from "./CarouselControl"
 import { breakpoint } from "../../../utils/breakpoints"
+import { setFlex } from "../../../utils/alignmentHelpers"
 
 const Carousel = ({ children }) => {
   const totalItems = children.length
@@ -53,7 +54,6 @@ const Carousel = ({ children }) => {
           )
         }
       >
-        Next
       </CarouselControl>
       <CarouselControl
         direction="prev"
@@ -64,7 +64,6 @@ const Carousel = ({ children }) => {
           )
         }
       >
-        Prev
       </CarouselControl>
     </CarouselWrapper>
   )
@@ -81,10 +80,9 @@ const CarouselWrapper = styled.div`
   overflow: hidden;
   position: relative;
   padding: 1rem;
-  p {
-    font-size: 1rem;
-    margin-top: 0.25rem;
-  }
+  display: flex;
+  ${setFlex()};
+
   ${breakpoint.sm`
    padding: 5rem 10rem;`}
   ${breakpoint.md`
@@ -94,6 +92,11 @@ const CarouselWrapper = styled.div`
 
 const CarouselMain = styled.div`
   transform-style: preserve-3d;
+  width: 100%;
+  ${breakpoint.xs`
+   width: 80%;`}
+   ${breakpoint.sm`
+   width: 100%;`}
 `
 
 const CarouselItemWrapper = styled.div`

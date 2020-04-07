@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import * as colors from "../../../utils/colors"
+import { breakpoint } from "../../../utils/breakpoints"
 
 const SkillAnnotation = ({ skillAnnotation }) => {
   return <SkillAnnotationWrapper>{skillAnnotation}</SkillAnnotationWrapper>
@@ -8,11 +9,11 @@ const SkillAnnotation = ({ skillAnnotation }) => {
 
 const SkillAnnotationWrapper = styled.p`
         text-align: center;
+        font-size: 1rem;
+        padding-top: 0.25rem;
         color: ${colors.brandSecondary};
-        margin: 0;
-        padding: 0;
         padding-bottom: 2rem;
-        margin-top: -2rem;
+        padding-left: 0.75rem;
         &:before {
             content: "<---";
             margin-right: 1.5rem;
@@ -21,7 +22,8 @@ const SkillAnnotationWrapper = styled.p`
             content: "--->";
             margin-left: 1.5rem;
         }
-    } 
+    ${breakpoint.xs`
+    font-size: 1.15rem;`}
     `
 
 export default SkillAnnotation
