@@ -13,7 +13,7 @@ const ProjectFixedHeader = ({
 }) => {
   const projectFixedHeaderEl = useRef()
   // temp workaround for lack of babel-flow parsing to support forwardRefs
-  if (typeof window !== "undefined") {
+  if (typeof window !== "undefined" && projectFixedHeaderEl.current !== "undefined") {
     window.addEventListener("scroll", () => {
       if (window.matchMedia("screen and (min-width: 992px)")) {
         const siteHeaderRect = document

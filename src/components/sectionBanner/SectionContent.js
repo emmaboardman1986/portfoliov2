@@ -45,7 +45,7 @@ const SectionContentWrapper = styled.div`
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  button {
+  a {
     margin-top: 1rem;
     ${breakpoint.md`
     align-self: flex-end;

@@ -16,8 +16,6 @@ const NavLinkListItemWrapper = styled.li`
 height: 100%;
 border-bottom: 3px solid ${colors.brandSecondary};
 width: 100%;
-display: flex;
-${setFlex()};
 ${breakpoint.md`
 border-left: 3px solid ${colors.brandSecondary};
 border-bottom: 0;
@@ -27,6 +25,10 @@ a {
   color: ${colors.brandSecondary};
   font-family: 'Roboto-Mono-Regular';
   text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  ${setFlex()};
 }
 &:hover {
   background-color: ${colors.brandSecondary};

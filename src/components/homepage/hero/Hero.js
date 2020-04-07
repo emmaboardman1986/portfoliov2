@@ -26,7 +26,7 @@ const HeroWrapper = styled.div`
       margin-top: -3rem;
       p {
         font-size: 1.09rem;
-        width: 90%;
+        width: 85%;
       }
       svg {
         width: 95%;
@@ -40,7 +40,7 @@ const HeroWrapper = styled.div`
     }
     .skills-stack:nth-of-type(3) {
       z-index: 1;
-      margin-left: -3rem;
+      margin-left: -2.5rem;
       margin-top: -6rem;
       p {
         font-size: 0.95rem;
