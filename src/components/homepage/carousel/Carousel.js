@@ -45,22 +45,21 @@ const Carousel = ({ children }) => {
           </CarouselItemWrapper>
         ))}
       </CarouselMain>
-
-      <CarouselControl
-        direction="next"
-        onClick={() =>
-          setCurrentItemIndex(
-            currentItemIndex >= children.length - 1 ? 0 : currentItemIndex + 1
-          )
-        }
-      >
-      </CarouselControl>
       <CarouselControl
         direction="prev"
         currentItemIndex={currentItemIndex}
         onClick={() =>
           setCurrentItemIndex(
             currentItemIndex <= 0 ? children.length - 1 : currentItemIndex - 1
+          )
+        }
+      >
+      </CarouselControl>
+      <CarouselControl
+        direction="next"
+        onClick={() =>
+          setCurrentItemIndex(
+            currentItemIndex >= children.length - 1 ? 0 : currentItemIndex + 1
           )
         }
       >

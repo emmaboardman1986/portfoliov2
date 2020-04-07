@@ -15,7 +15,7 @@ const NavLinkListWrapper = styled.ul`
   background-color: ${colors.brandWhite};
   display: flex;
   flex-direction: column;
-  height: 91vh;
+  height: calc(100% - 70px);
   position: fixed;
   z-index: 200;
   bottom: 0;

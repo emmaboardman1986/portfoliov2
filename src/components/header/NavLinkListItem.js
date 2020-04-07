@@ -4,8 +4,8 @@ import * as colors from "../../utils/colors"
 import { breakpoint } from "../../utils/breakpoints"
 import { setFlex } from "../../utils/alignmentHelpers"
 
-const NavLinkListItem = ({ children }) => {
-  return <NavLinkListItemWrapper>{children}</NavLinkListItemWrapper>
+const NavLinkListItem = ({ children, hidden }) => {
+  return <NavLinkListItemWrapper hidden={hidden}>{children}</NavLinkListItemWrapper>
 }
 
 const NavLinkListItemWrapper = styled.li`
