@@ -65,7 +65,7 @@ h4 {
   }
 }
 p {
-  font-family: "Roboto-Mono-Regular";
+  font-family: "Roboto-Mono-Regular", monospace;
 }
 span {
   font-family: "Roboto-Mono-Regular";

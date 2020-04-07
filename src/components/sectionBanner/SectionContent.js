@@ -42,13 +42,11 @@ const SectionContentWrapper = styled.div`
     props.layoutOrder === "even" ? colors.brandPrimary : colors.brandWhite};
   color: ${colors.brandSecondary};
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   button {
-  
     margin-top: 1rem;
-    margin-bottom: 1rem;
     ${breakpoint.md`
     align-self: flex-end;
     margin: 0;
@@ -58,7 +56,6 @@ const SectionContentWrapper = styled.div`
     min-width: 150px;
   }
   p {
-    /* text-align: center; */
     margin-bottom: 1.5rem;
   }
   ${setFlex()};

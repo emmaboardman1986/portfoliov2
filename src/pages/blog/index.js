@@ -8,7 +8,6 @@ import PagesIndex from "../../components/ui/PagesIndex"
 export default ({ data }) => {
   return (
     <Layout>
-      <Main>
         <Section>
         <h1>Blog</h1>
         <PagesIndex>
@@ -22,7 +21,6 @@ export default ({ data }) => {
         ))}
         </PagesIndex>
         </Section>
-      </Main>
     </Layout>
   )
 }

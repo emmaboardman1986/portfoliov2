@@ -6,7 +6,7 @@ const Section = ({ children }) => {
 }
 
 const SectionWrapper = styled.section`
-  padding: 1rem;
+  padding: 2rem;
 `
 
 export default Section

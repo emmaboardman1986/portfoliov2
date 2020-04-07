@@ -39,7 +39,7 @@ export default () => {
     {
       sectionTitle: "Contact",
       sectionContent:
-        "<h4>Get in touch!</h4><ul><li><p><a href='#'>Linked In</a></p></li><li><p><a href='#'>GitHub</a></p></li><li><p><a href='#'>emma@emmaboardman.co.uk</a></p></li></ul>",
+        "<h3>Get in touch!</h3><ul><li><p><a href='#'>Linked In</a></p></li><li><p><a href='#'>GitHub</a></p></li><li><p><a href='#'>emma@emmaboardman.co.uk</a></p></li></ul>",
       sectionLink: "",
       sectionLinkText: "",
       sectionContentType: "standard list",

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Header from "../header/Header"
+import Main from "../ui/Main"
 import HeadingFont from "../../../static/assets/fonts/BC-Falster-Grotesk-Regular.woff2"
 import BodyFont from "../../../static/assets/fonts/robotomono-regular-webfont.woff2"
 import { Helmet } from "react-helmet"
@@ -31,7 +32,7 @@ const Layout = ({ children }) => {
         setIsMenuExpanded={setIsMenuExpanded}
       />
 
-      <main>{children}</main>
+      <Main>{children}</Main>
       <footer>© 2020 Emma Boardman</footer>
     </>
   )

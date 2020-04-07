@@ -17,17 +17,6 @@ li {
   list-style: none;
 }
 
-main {
-  margin-top: 15vh;
-  min-height: 75vh;
-  box-sizing: border-box;
-}
-@media screen and (min-width: 992px) {
-  main {
-    margin-top: 1rem;
-  }
-}
-
 a {
   text-decoration: none;
   color: #001759;

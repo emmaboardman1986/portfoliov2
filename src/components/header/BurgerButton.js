@@ -37,7 +37,7 @@ const BurgerButtonWrapper = styled.button`
   span {
     display: block;
     position: absolute;
-    height: 5px;
+    height: 6px;
     width: 45px;
     background: ${colors.brandSecondary};
     border-radius: 2px;
@@ -50,10 +50,10 @@ const BurgerButtonWrapper = styled.button`
       top: 0px;
     }
     :nth-child(2) {
-      top: 11px;
+      top: 12px;
     }
     :nth-child(3) {
-      top: 22px;
+      top: 24px;
     }
   }
   &[aria-expanded="true"] {
