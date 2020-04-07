@@ -19,8 +19,8 @@ const ProjectTitleWrapper = styled.div`
   border-top: 3px solid ${colors.brandSecondary};
   display: flex;
   padding: 0.5rem;
-  box-sizing: border-box;
   height: 8vh;
+  box-sizing: border-box;
   ${setFlex()};
   h1 {
     font-size: 0.95rem;
@@ -34,6 +34,7 @@ const ProjectTitleWrapper = styled.div`
     font-size: 0.75rem;
   }
   ${breakpoint.md`
+  border-top: 0;
   padding: 1rem;
   h3 {
     font-size: 1.25rem;

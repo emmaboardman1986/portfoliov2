@@ -32,7 +32,7 @@ const ProjectNav = ({
 const ProjectNavWrapper = styled.div`
   background-color: ${colors.brandPrimary};
   border-bottom: 2px solid ${colors.brandSecondary};
-  height: fit-content;
+  box-sizing: border-box;
 `
 
 const ProjectNavList = styled.ul`

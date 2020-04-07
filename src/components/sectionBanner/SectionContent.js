@@ -73,7 +73,10 @@ const SectionContentTextBlock = styled.div``
 
 const SectionContentStandardList = styled.div`
   width: 100%;
-
+  h3 {
+    margin-bottom: 1rem;
+    font-family: "BC-Falster-Grotesk-Regular", Arial;
+  }
   li {
     a {
       font-family: "BC-Falster-Grotesk-Regular", Arial;
@@ -106,10 +109,6 @@ const SectionContentStandardList = styled.div`
 `
 
 const SectionContentDataChunkList = styled(SectionContentStandardList)`
-  h3 {
-    margin: 1rem;
-    font-family: "BC-Falster-Grotesk-Regular", Arial;
-  }
   p {
     &:before {
       margin-left: 1rem;

@@ -1,12 +1,38 @@
 import styled from "styled-components"
-import React from "react"
+import React, { useRef } from "react"
 import { breakpoint } from "../../utils/breakpoints"
 import ProjectNav from "../../components/projects/ProjectNav"
 import ProjectTitle from "../../components/projects/ProjectTitle"
 
-const ProjectFixedHeader = ({ title, isOverviewInViewPort, isUXInViewPort, isA11yInViewPort, isResultInViewPort }) => {
+const ProjectFixedHeader = ({
+  title,
+  isOverviewInViewPort,
+  isUXInViewPort,
+  isA11yInViewPort,
+  isResultInViewPort,
+}) => {
+  const projectFixedHeaderEl = useRef()
+  // temp workaround for lack of babel-flow parsing to support forwardRefs
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", () => {
+      if (window.matchMedia("screen and (min-width: 992px)")) {
+        const siteHeaderRect = document
+          .querySelector("header")
+          .getBoundingClientRect()
+
+        if (siteHeaderRect.bottom <= 0) {
+          console.log(projectFixedHeaderEl.current)
+          projectFixedHeaderEl.current.classList.add("is-sticky")
+          // projectFixedHeaderEl.current.style.position = "fixed"
+        } else {
+          projectFixedHeaderEl.current.classList.remove("is-sticky")
+        }
+      }
+    })
+  }
+
   return (
-    <ProjectFixedHeaderWrapper>
+    <ProjectFixedHeaderWrapper ref={projectFixedHeaderEl}>
       <ProjectTitle title={title} />
       <ProjectNav
         isOverviewInViewPort={isOverviewInViewPort}
@@ -20,10 +46,17 @@ const ProjectFixedHeader = ({ title, isOverviewInViewPort, isUXInViewPort, isA11
 
 const ProjectFixedHeaderWrapper = styled.div`
   position: fixed;
-  top: 15vh;
-  height: 16vh;
+  top: 100px;
   left: 0;
   width: 100%;
+  ${breakpoint.md`
+  position: relative;
+  top:initial;
+  `}
+  &.is-sticky {
+  position: fixed;
+  top: 0px;
+  }
 `
 
 export default ProjectFixedHeader

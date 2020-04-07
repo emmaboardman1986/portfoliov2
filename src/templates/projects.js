@@ -6,6 +6,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import * as colors from "../utils/colors"
 import { setFlex } from "../utils/alignmentHelpers"
+import { breakpoint } from "../utils/breakpoints"
 import { useIsInViewport } from "../utils/customHooks/useIsInViewport"
 
 export default ({ data }) => {
@@ -15,7 +16,6 @@ export default ({ data }) => {
   const uxEl = useRef()
   const a11yEl = useRef()
   const resultEl = useRef()
-  // const isOverviewInViewPort = useIsInViewport({element: overviewEl});
   const isOverviewInViewPort = useIsInViewport({ element: overviewEl })
   const isUXInViewPort = useIsInViewport({ element: uxEl })
   const isA11yInViewPort = useIsInViewport({ element: a11yEl })
@@ -72,17 +72,24 @@ export default ({ data }) => {
 }
 
 const ProjectMain = styled.main`
-  margin-top: 31vh;
+  margin-top: calc(14vh + 100px);
   padding: 1rem;
   display: flex;
   flex-direction: column;
   ${setFlex()};
+  ${breakpoint.md`
+  margin-top: 0;`}
 `
 
 const AnchorSpacingSpan = styled.span`
-  height: 31vh;
-  margin-top: -31vh;
+  height: 33vh;
+  margin-top: -33vh;
   visibility: hidden;
+  ${breakpoint.md`
+  &:not(:first-of-type){
+    height: 16vh;
+    margin-top: -16vh;
+  }`}
 `
 
 const ProjectSection = styled.section`
