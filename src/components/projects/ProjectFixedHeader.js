@@ -13,18 +13,15 @@ const ProjectFixedHeader = ({
 }) => {
   const projectFixedHeaderEl = useRef()
   // temp workaround for lack of babel-flow parsing to support forwardRefs
-  if (typeof window !== "undefined" && projectFixedHeaderEl.current !== "undefined") {
+  if (typeof window !== "undefined" && projectFixedHeaderEl.current !== null) {
     window.addEventListener("scroll", () => {
       if (window.matchMedia("screen and (min-width: 992px)")) {
         const siteHeaderRect = document
           .querySelector("header")
           .getBoundingClientRect()
-
-        if (siteHeaderRect.bottom <= 0) {
-          console.log(projectFixedHeaderEl.current)
+        if (projectFixedHeaderEl.current && siteHeaderRect.bottom <= 0) {
           projectFixedHeaderEl.current.classList.add("is-sticky")
-          // projectFixedHeaderEl.current.style.position = "fixed"
-        } else {
+        } else if (projectFixedHeaderEl.current && siteHeaderRect.bottom > 0) {
           projectFixedHeaderEl.current.classList.remove("is-sticky")
         }
       }
@@ -54,8 +51,8 @@ const ProjectFixedHeaderWrapper = styled.div`
   top:initial;
   `}
   &.is-sticky {
-  position: fixed;
-  top: 0px;
+    position: fixed;
+    top: 0px;
   }
 `
 

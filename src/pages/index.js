@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/ui/layout"
-import Section from "../components/sectionBanner/Section"
+import SectionBanner from "../components/sectionBanner/SectionBanner"
 import Carousel from "../components/homepage/carousel/Carousel"
 import SkillsStack from "../components/homepage/skillsStack/SkillsStack"
 import Hero from "../components/homepage/hero/Hero"
@@ -61,7 +61,7 @@ export default () => {
       </Hero>
 
       {sectionContent.map((section, index) => (
-        <Section
+        <SectionBanner
           key={index}
           layoutOrder={index % 2 === 0 ? "even" : "odd"}
           title={section.sectionTitle}

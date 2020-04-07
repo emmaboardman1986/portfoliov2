@@ -15,16 +15,16 @@ const Nav = ({ isMenuExpanded, setIsMenuExpanded }) => {
       />
       <NavLinkList isMenuExpanded={isMenuExpanded}>
         <NavLinkListItem>
-          <Link to="/projects">Projects</Link>
+          <Link to="/projects" activeClassName="active" partiallyActive={true}>Projects</Link>
         </NavLinkListItem>
         <NavLinkListItem>
-          <Link to="/about-me">About</Link>
+          <Link to="/about-me" activeClassName="active">About</Link>
         </NavLinkListItem>
         <NavLinkListItem>
-          <Link to="/blog">Blog</Link>
+          <Link to="/blog" activeClassName="active" partiallyActive={true}>Blog</Link>
         </NavLinkListItem>
         <NavLinkListItem>
-          <Link to="/#contact">Contact</Link>
+          <Link to="/#contact" activeClassName="active">Contact</Link>
         </NavLinkListItem>
       </NavLinkList>
     </NavWrapper>

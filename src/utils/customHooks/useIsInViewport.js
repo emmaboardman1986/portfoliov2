@@ -8,7 +8,7 @@ export const useIsInViewport = ({ element }) => {
 
   useEffect(() => {
     if (element.current) {
-      setWindowHeight(window.innerHeight)
+      setWindowHeight(windowHeight)
       checkIsInViewport()
       window.addEventListener("scroll", checkIsInViewport)
     }
@@ -16,11 +16,11 @@ export const useIsInViewport = ({ element }) => {
   }, [element])
 
   const checkIsInViewport = () => {
-    var fixedHeaderHeight = (window.innerHeight / 100) * 35
+    var fixedHeaderHeight = (windowHeight / 100) * 35
     var positionInViewport = element.current.getBoundingClientRect()
 
     if (
-      positionInViewport.top < (window.innerHeight - (window.innerHeight / 2))  &&
+      positionInViewport.top < (windowHeight - (windowHeight / 2))  &&
       positionInViewport.top + positionInViewport.height - fixedHeaderHeight > 0
     ) {
       setIsInViewport(true)

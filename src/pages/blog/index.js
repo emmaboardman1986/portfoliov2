@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/ui/layout"
-import Main from "../../components/ui/Main"
 import Section from "../../components/ui/Section"
 import PagesIndex from "../../components/ui/PagesIndex"
 

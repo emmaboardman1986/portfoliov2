@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useRef } from "react"
 import Layout from "../components/ui/layout"
 import ProjectFixedHeader from "../components/projects/ProjectFixedHeader"
 import Heading from "../components/ui/Heading"
