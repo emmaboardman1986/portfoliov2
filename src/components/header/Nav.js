@@ -14,16 +14,16 @@ const Nav = ({ isMenuExpanded, setIsMenuExpanded }) => {
         setIsMenuExpanded={setIsMenuExpanded}
       />
       <NavLinkList isMenuExpanded={isMenuExpanded}>
-        <NavLinkListItem hidden={!isMenuExpanded}>
+        <NavLinkListItem isMenuExpanded={isMenuExpanded}>
           <Link to="/projects" activeClassName="active" partiallyActive={true}>Projects</Link>
         </NavLinkListItem>
-        <NavLinkListItem hidden={!isMenuExpanded}>
+        <NavLinkListItem isMenuExpanded={isMenuExpanded}>
           <Link to="/about-me" activeClassName="active">About</Link>
         </NavLinkListItem>
-        <NavLinkListItem hidden={!isMenuExpanded}>
+        <NavLinkListItem isMenuExpanded={isMenuExpanded}>
           <Link to="/blog" activeClassName="active" partiallyActive={true}>Blog</Link>
         </NavLinkListItem>
-        <NavLinkListItem hidden={!isMenuExpanded}>
+        <NavLinkListItem isMenuExpanded={isMenuExpanded}>
           <Link to="/#contact" activeClassName="active" onClick={() => setIsMenuExpanded(false)}>Contact</Link>
         </NavLinkListItem>
       </NavLinkList>
