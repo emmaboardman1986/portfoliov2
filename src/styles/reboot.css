@@ -19,13 +19,12 @@ li {
 
 main {
   margin-top: 15vh;
-  min-height: 77vh;
+  min-height: 75vh;
   box-sizing: border-box;
 }
 @media screen and (min-width: 992px) {
   main {
     margin-top: 1rem;
-    min-height: 73vh;
   }
 }
 

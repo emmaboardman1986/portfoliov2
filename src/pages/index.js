@@ -16,7 +16,7 @@ export default () => {
       sectionTitle: "About",
       sectionContent:
         "<p>Hi! I’m Emma, a front-end developer with a passion for UX and a commitment to accessibility.</p><p>I began my professional life as a Japanese translator & interpreter. Seeking new challenges, I moved into tech in 2016.</p><p>I currently work for a fintech start-up in Edinburgh, Scotland. My team are responsible for building bespoke client sites for our white-label investment platform, and rebuilding our back-office UI in React.</p>",
-      sectionLink: "about",
+      sectionLink: "about-me",
       sectionLinkText: "Read more",
       sectionContentType: "text block",
     },

@@ -18,7 +18,7 @@ const Nav = ({ isMenuExpanded, setIsMenuExpanded }) => {
           <Link to="/projects">Projects</Link>
         </NavLinkListItem>
         <NavLinkListItem>
-          <Link to="/about">About</Link>
+          <Link to="/about-me">About</Link>
         </NavLinkListItem>
         <NavLinkListItem>
           <Link to="/blog">Blog</Link>
