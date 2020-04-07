@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/ui/layout"
-import Section from "../components/ui/section"
+import Section from "../components/ui/Section"
 import Heading from "../components/ui/Heading"
 import BodyText from "../components/ui/BodyText"
 

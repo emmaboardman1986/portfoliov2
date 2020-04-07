@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/ui/layout"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import Section from "../components/ui/section"
+import Section from "../components/ui/Section"
 import * as colors from "../utils/colors"
 
 export default ({data}) => {
