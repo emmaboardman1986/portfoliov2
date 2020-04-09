@@ -16,6 +16,7 @@ const NavLinkListItemWrapper = styled.li`
   height: 100%;
   border-bottom: 3px solid ${colors.brandSecondary};
   width: 100%;
+  position: relative;
   display: ${props => props.isMenuExpanded ? "block" : "none"};
   ${breakpoint.md`
 border-left: 3px solid ${colors.brandSecondary};
