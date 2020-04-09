@@ -5,7 +5,7 @@ import * as colors from "../../../utils/colors"
 const AccordionTitle = ({ expanded, onClick, title, sectionIsHidden }) => {
   return (
     <AccordionTitleWrapper expanded={expanded}>
-      <AccordionTitleContent>
+      <AccordionTitleContent expanded={expanded}>
         {title}{" "}
         <button aria-expanded={expanded} onClick={onClick}>
           <svg focusable="false" width="20" height="20" viewBox="0 0 10 10">
@@ -19,17 +19,21 @@ const AccordionTitle = ({ expanded, onClick, title, sectionIsHidden }) => {
 }
 
 const AccordionTitleWrapper = styled.div`
-  border-bottom: 1px solid ${colors.brandSecondary};
+  border-bottom: 2px solid ${colors.brandSecondary};
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
   background-color: ${props =>
-    props.expanded ? colors.brandSecondaryDark : colors.brandSecondary};
+    props.expanded ? colors.brandWhite : colors.brandPrimary};
   padding: 0.5rem;
 `
 
-const AccordionTitleContent = styled.h2`
+const AccordionTitleContent = styled.h3`
   display: flex;
   font-size: 1.2rem;
+  padding: 0.25rem 0;
   justify-content: space-between;
-  color: white;
+  align-items: center;
+  color: ${colors.brandSecondaryDark};
   margin: 0;
   button {
     width: auto;
@@ -42,7 +46,7 @@ const AccordionTitleContent = styled.h2`
     margin: 0;
     &:focus svg {
       outline: 0;
-      box-shadow: 0 0 0 3px white;
+      box-shadow: 0 0 0 3px ${colors.brandSecondaryDark};
     }
     svg {
       margin-left: 1rem;

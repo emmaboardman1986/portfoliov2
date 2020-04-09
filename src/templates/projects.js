@@ -8,6 +8,7 @@ import * as colors from "../utils/colors"
 import { setFlex } from "../utils/alignmentHelpers"
 import { breakpoint } from "../utils/breakpoints"
 import { useIsInViewport } from "../utils/customHooks/useIsInViewport"
+import A11yChecklist from "../components/ui/A11yChecklist"
 
 export default ({ data }) => {
   const project = data.projectsJson
@@ -58,6 +59,7 @@ export default ({ data }) => {
           <ProjectA11y
             dangerouslySetInnerHTML={createMarkup(project.a11y)}
           ></ProjectA11y>
+          <A11yChecklist />
         </ProjectSection>
         <AnchorSpacingSpan id="result"></AnchorSpacingSpan>
         <ProjectSection ref={resultEl}>

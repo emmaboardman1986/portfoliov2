@@ -1,6 +1,7 @@
 // Primary / Peach
 export const peachLight = '#FFF5E9'
 export const brandPrimary = peachLight
+export const brandPrimaryLight = '#fffcf8'
 
 // Secondary / Navy
 export const navyMedium = '#001759'

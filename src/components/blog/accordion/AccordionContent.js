@@ -8,7 +8,13 @@ const AccordionContent = ({ children }) => {
 
 export const AccordionContentWrapper = styled.div`
   padding: 0.5rem;
-  background-color: ${colors.brandPrimary};
+  background-color: #fffcf8;
+  border-bottom: 2px solid ${colors.brandSecondary};
+  h4 {
+    margin: 0;
+    padding-top: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
 `;
 
 export default AccordionContent;
