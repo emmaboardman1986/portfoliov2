@@ -66,6 +66,7 @@ const A11yChecklistWrapper = styled.div`
   border: 2px solid ${colors.brandSecondary};
   box-shadow: 7px 6px 0 0 ${colors.brandSecondary};
   margin: 1.5rem 0;
+  margin-bottom: 0;
   ul {
     padding: 1.5rem 2rem;
     li {

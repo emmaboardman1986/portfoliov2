@@ -13,7 +13,7 @@ const NavLinkListItem = ({ children, isMenuExpanded }) => {
 }
 
 const NavLinkListItemWrapper = styled.li`
-  height: 100%;
+  height: calc(100% / 4);
   border-bottom: 3px solid ${colors.brandSecondary};
   width: 100%;
   position: relative;
