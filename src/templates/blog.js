@@ -34,7 +34,7 @@ const TitleWrapper = styled.h1`
 
 const Post = styled.div`
   ul {
-    padding: 1.5rem 2rem;
+    padding: 0.75rem 2rem;
     li {
       font-family: "Roboto-Mono-Regular", monospace;
       list-style: disc;

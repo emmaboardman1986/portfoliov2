@@ -42,6 +42,9 @@ const ProjectFixedHeader = ({
 }
 
 const ProjectFixedHeaderWrapper = styled.div`
+  * {
+    box-sizing: border-box;
+  }
   position: fixed;
   top: 100px;
   left: 0;

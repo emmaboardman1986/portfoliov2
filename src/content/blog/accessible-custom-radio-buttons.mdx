@@ -1,0 +1,94 @@
+---
+title: "Accessible, Custom-styled Radio Buttons"
+date: "2019-04-08"
+tags: "Accessibility, Semantic HTML, no JS, React"
+---
+
+import { Link } from "gatsby"
+import Accordion from "../../components/blog/accordion/Accordion"
+import AccordionSection from "../../components/blog/accordion/AccordionSection"
+import A11yChecklist from "../../components/ui/A11yChecklist"
+import BodyText from "../../components/ui/BodyText"
+
+## Overview
+<BodyText>
+My explorations into building accessible, custom-styled radio buttons. First in HTML with no JS, then again in React.
+</BodyText>  
+
+- [HTML & ES6 CodeSandbox](https://codesandbox.io/s/accessible-styled-radio-buttons-no-js-beln1)
+- [React CodeSandbox](https://codesandbox.io/s/accessible-custom-styled-radio-buttons-react-xqktr)
+
+> Disclaimer: The internet is full of wonderful articles on accessible, custom-styled radio buttons. This post does not attempt to reinvent the wheel. It is my personal exploration of what is required to make the key components of the web inclusive and accessible.
+
+## My accessibility checklist
+
+This list was created based on the published advice of accessibility experts and standards groups. I do not pretend to have met all user cases, and my testing is me, with a mac screen reader.
+
+**This is not, and is not intended to act as, a replacement for diverse user testing.**
+
+<A11yChecklist />
+
+## Basic Mark-up
+
+```
+  <fieldset>
+        <legend>Allow 3rd party cookies</legend>
+        <input type="radio" id="3rd-party-on" name="3rd-party" value="on" />
+        <label for="3rd-party-on">on</label>
+        <input
+          type="radio"
+          id="3rd-party-off"
+          name="3rd-party"
+          value="off"
+          checked
+        />
+        <label for="3rd-party-off">off</label>
+      </fieldset>
+```
+
+## How & Why?
+
+<Accordion>
+  <div title="Signalling functionality for keyboard users #1">
+    <h4>Feature:</h4>
+    <p>Rely on built-in behaviours where possible</p>
+    <h4>Rationale:</h4>
+    <p>
+     HTML offers us keyboard functionality for radio buttons out of the box. The fieldset and legend work together to identify the buttons as a group and the shared name allows a keyboard user to toggle between the buttons using the arrow keys.  
+    </p>
+    <h4>Implementation details:</h4>
+    <p>To ensure this default functionality is not lost to custom styling, it is important to not hide the input from the DOM. A visually hidden class will ensure that styling for sighted users can be implemented, without losing the keyboard accessibility. 
+</p>
+  </div>
+  <div title="Signalling functionality for keyboard users #2">
+    <h4>Feature:</h4>
+    <p>
+      Nest the input within the label 
+    </p>
+    <h4>Rationale:</h4>
+    <p>
+      When the input is nested within the label, the label becomes the trigger for the input itself. It also increases the hit area of the input, improving usability for mouse or touch users. 
+    </p>
+  </div>
+  <div title="Signalling functionality to sighted users #1">
+    <h4>Feature:</h4>
+    <p>
+      Wrap the label text in a span 
+    </p>
+    <h4>Rationale:</h4>
+    <p>
+      Wrapping the label text in a span allows:
+      <ul>
+        <li> A custom radio button to be created as the span's :before element</li>
+       <li>focus styling to be added. this is lost when the original input is visually hidden.</li>
+      </ul>
+    </p>
+    <h4>Implementation details:</h4>
+   <p>Using a box-shadow to wrap the span on focus enables the use of border-radius, facilitating a (subjectively) improved visual design.</p>
+  </div>
+</Accordion>
+
+## Results
+
+- [HTML & ES6 CodeSandbox](https://codesandbox.io/s/accessible-styled-radio-buttons-no-js-beln1)
+- [React CodeSandbox](https://codesandbox.io/s/accessible-custom-styled-radio-buttons-react-xqktr)

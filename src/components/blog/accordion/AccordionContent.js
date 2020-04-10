@@ -8,7 +8,8 @@ const AccordionContent = ({ children }) => {
 
 export const AccordionContentWrapper = styled.div`
   padding: 0.5rem;
-  background-color: #fffcf8;
+  padding-bottom: 1.25rem;
+  background-color: ${colors.brandPrimaryLight};
   border-bottom: 2px solid ${colors.brandSecondary};
   h4 {
     margin: 0;
