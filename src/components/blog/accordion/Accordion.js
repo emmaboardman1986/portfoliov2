@@ -39,18 +39,17 @@ const Accordion = ({ children }) => {
   }
 
   return (
-    <>
-      <AccordionToggle
-        role="switch"
-        aria-pressed={expandAll}
-        onClick={toggleAll}
-        className={expandAll ? "pressed-in" : "popped-out"}
-      >
-        {expandAll === true ? "Collapse All" : "Expand All"}
-      </AccordionToggle>
-      {/* <AccordionToggle onClick={() => toggleAll(true)}>Expand All</AccordionToggle>
-    <AccordionToggle onClick={() => toggleAll(false)}>Collapse All</AccordionToggle> */}
-      <AccordionWrapper>
+    <AccordionWrapper>
+    <AccordionToggle
+    role="switch"
+    aria-pressed={expandAll}
+    onClick={toggleAll}
+    className={expandAll ? "pressed-in" : "popped-out"}
+  >
+    {expandAll === true ? "Collapse All" : "Expand All"}
+  </AccordionToggle>
+      <AccordionMain>
+      
         {children.map((child, index) => (
           <AccordionSection
             key={index}
@@ -61,24 +60,26 @@ const Accordion = ({ children }) => {
             {child.props.children}
           </AccordionSection>
         ))}
+      </AccordionMain>
       </AccordionWrapper>
-    </>
   )
 }
 
 const AccordionWrapper = styled.div`
-  border-radius: 3px;
-  width: 100%;
-  border: 2px solid ${colors.brandSecondary};
-  box-shadow: 7px 6px 0 0 ${colors.brandSecondary};
-  box-shadow: ${props => (props.expandAll ? "inset 0 0 0 0.15rem #000" : "")};
-  margin: 0.75rem 0;
+    width: 100%;
   ${breakpoint.md`
   width: 70%;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
   `}
+`
+const AccordionMain = styled.div`
+  border-radius: 3px;
+  border: 2px solid ${colors.brandSecondary};
+  box-shadow: 7px 6px 0 0 ${colors.brandSecondary};
+  box-shadow: ${props => (props.expandAll ? "inset 0 0 0 0.15rem #000" : "")};
+  margin: 0.75rem 0;
 `
 
 export const setPressed = () => {
