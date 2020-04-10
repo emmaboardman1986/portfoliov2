@@ -10,7 +10,6 @@ const Accordion = ({ children }) => {
   useEffect(() => {
     let availableSections = {}
     let reducer = (returnedObject, sectionIndex) => {
-      console.log(sectionIndex.props.title)
       if (!returnedObject[sectionIndex.props.title]) {
         returnedObject[sectionIndex.props.title] = false
       }
@@ -26,7 +25,21 @@ const Accordion = ({ children }) => {
       [index]: !expandedSections[index],
     })
   }
+
+  const toggleAll = (value) => {
+    let updatedSections = {}
+    let reducer = (returnedObject, sectionIndex) => {
+        returnedObject[sectionIndex.props.title] = value
+      return returnedObject
+    }
+    children.reduce(reducer, updatedSections)
+    setExpandedSections(updatedSections)
+  }
+
   return (
+    <>
+    <AccordionToggle onClick={() => toggleAll(true)}>Expand All</AccordionToggle>
+    <AccordionToggle onClick={() => toggleAll(false)}>Collapse All</AccordionToggle>
     <AccordionWrapper>
       {children.map((child, index) => (
         <AccordionSection
@@ -39,6 +52,7 @@ const Accordion = ({ children }) => {
         </AccordionSection>
       ))}
     </AccordionWrapper>
+    </>
   )
 }
 
@@ -54,6 +68,17 @@ const AccordionWrapper = styled.div`
   margin-right: auto;
   box-sizing: border-box;
   `}
+`
+
+const AccordionToggle = styled.button`
+  border-radius: 3px;
+  border: 2px solid ${colors.brandSecondary};
+  box-shadow: 2px 2px 0 0 ${colors.brandSecondary};
+  margin-bottom: 0.15rem ;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  background-color: ${colors.brandPrimaryLight};
 `
 
 export default Accordion
