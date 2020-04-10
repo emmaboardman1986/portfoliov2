@@ -12,7 +12,6 @@ import { breakpoint } from "../utils/breakpoints"
 const shortcodes = { Link }
 
 export default function PageTemplate({ data: { mdx } }) {
-  console.log(mdx)
   return (
     <Layout>
       <Section>
