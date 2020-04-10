@@ -28,7 +28,7 @@ const NavLinkListWrapper = styled.ul`
   align-items: center;
   justify-content: center;
   border: 3px solid ${colors.brandSecondary};
-  
+  border-bottom: 0;
   transform: ${props =>
     props.isMenuExpanded ? "translateX(0)" : "translateX(100%)"};
 

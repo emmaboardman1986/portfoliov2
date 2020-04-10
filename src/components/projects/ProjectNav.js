@@ -37,6 +37,7 @@ const ProjectNavWrapper = styled.div`
 
 const ProjectNavList = styled.ul`
   display: flex;
+  height: 100%;
   border-top: 2px solid ${colors.brandSecondary};
   ${setFlex({ x: "space-between", y: "center" })};
   .visible {
