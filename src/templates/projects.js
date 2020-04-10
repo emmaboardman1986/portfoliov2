@@ -106,6 +106,19 @@ const ProjectSection = styled.section`
   p {
     margin-top: 1.15rem;
   }
+  ul {
+    padding: 0.75rem 2rem;
+    li {
+      font-family: "Roboto-Mono-Regular", monospace;
+      list-style: disc;
+      &:not(:last-of-type) {
+        padding-bottom: 0.75rem;
+      }
+      li {
+        list-style: circle;
+      }
+    }
+  }
 `
 
 const ProjectContentBlock = styled.div``
