@@ -133,13 +133,13 @@ const ProjectOverviewTLDR = styled(ProjectContentBlock)`
   p {
     margin-top: 0;
   }
-  margin-top: 1.15rem;
   background-color: ${colors.brandPrimary};
   color: ${colors.brandBlack};
   padding: 1rem;
   margin: 0.5rem;
+  margin-top: 1.25rem;
   border-radius: 6px;
-  border: dashed 1px ${colors.brandPrimary};
+  border: dashed 2px ${colors.brandSecondaryDark};
   h3 {
     padding: 1rem 0;
     font-size: 1.15rem;
