@@ -55,10 +55,10 @@ background-color: ${colors.brandPrimary};
     border-left: 2px solid ${colors.brandSecondary};
   }
   width: 100%;
+  height: 100%;
   display: flex;
   ${setFlex()};
   padding: 1rem;
-  box-sizing: border-box;
   a {
     font-family: "Roboto-Mono-Regular", Arial;
   }

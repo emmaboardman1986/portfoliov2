@@ -20,7 +20,6 @@ const ProjectTitleWrapper = styled.div`
   display: flex;
   padding: 0.5rem;
   height: 8vh;
-  box-sizing: border-box;
   ${setFlex()};
   h1 {
     font-size: 0.95rem;

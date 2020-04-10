@@ -14,14 +14,15 @@ const NavLinkListItem = ({ children, isMenuExpanded }) => {
 
 const NavLinkListItemWrapper = styled.li`
   height: calc(100% / 4);
-  border-bottom: 3px solid ${colors.brandSecondary};
+  /* border-bottom: 3px solid ${colors.brandSecondary}; */
   width: 100%;
   position: relative;
-  display: ${props => props.isMenuExpanded ? "block" : "none"};
+  display: ${props => (props.isMenuExpanded ? "block" : "none")};
   ${breakpoint.md`
-border-left: 3px solid ${colors.brandSecondary};
-border-bottom: 0;
-display: block;
+    border-left: 3px solid ${colors.brandSecondary};
+    border-bottom: 0;
+    display: block;
+    height: 100%;
 `} /* padding: 3.25rem 4rem; */ a {
     color: ${colors.brandSecondary};
     font-family: "Roboto-Mono-Regular";
