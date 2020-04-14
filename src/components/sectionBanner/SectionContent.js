@@ -50,7 +50,7 @@ const SectionContentWrapper = styled.div`
     ${breakpoint.md`
     align-self: flex-end;
     margin: 0;
-    margin-right: ${props => (props.type === "even" ? "7%" : "6%")};
+    margin-right: ${props => (props.layoutOrder === "even" ? "7%" : "6%")};
     `}
 
     min-width: 150px;

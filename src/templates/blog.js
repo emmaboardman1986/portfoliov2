@@ -46,6 +46,12 @@ const Post = styled.div`
       }
     }
   }
+  a {
+    &:hover, &:focus {
+      background-color: ${colors.brandSecondary};
+      color: ${colors.brandWhite};
+    }
+  }
   h2 {
     padding: 1.25rem 0;
     padding-top: 1.75rem;

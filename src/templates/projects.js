@@ -99,6 +99,12 @@ const ProjectSection = styled.section`
   flex-direction: column;
   padding: 1rem 0;
   margin-bottom: 0.5rem;
+  a {
+    &:hover, &:focus {
+      background-color: ${colors.brandSecondary};
+      color: ${colors.brandWhite};
+    }
+  }
   h2 {
     padding-bottom: 0.25rem;
     font-size: 1.5rem;

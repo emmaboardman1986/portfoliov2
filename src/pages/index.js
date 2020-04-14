@@ -8,8 +8,8 @@ import * as colors from "../utils/colors"
 
 export default () => {
   const dailyUseSkills = ["JavaScript", "HTML & CSS", "Accessibility"]
-  const sideProjectSkills = ["Performance", "UX Writing", "User Research"]
-  const wipSkills = ["Graphic Design", "Darts", "Technical Writing"]
+  const sideProjectSkills = ["Performance", "User Testing", "User Research"]
+  const wipSkills = ["UI Design", "Darts", "Technical Writing"]
 
   const sectionContent = [
     {
