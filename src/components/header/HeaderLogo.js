@@ -9,7 +9,7 @@ const HeaderLogo = () => {
     <HeaderLogoWrapper>
       <Link to="/">
         <HeaderLogoMainText>Emma Boardman</HeaderLogoMainText>
-        <HeaderLogoSubTitle>UX & front-end development</HeaderLogoSubTitle>
+        <HeaderLogoSubTitle>Front-end & UX development</HeaderLogoSubTitle>
       </Link>
     </HeaderLogoWrapper>
   )

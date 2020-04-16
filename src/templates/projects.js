@@ -81,6 +81,56 @@ const ProjectMain = styled.main`
   ${setFlex()};
   ${breakpoint.md`
   margin-top: 0;`}
+  .case-study-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .case-study-info {
+    margin-bottom: 2%;
+    order: 2;
+    img {
+      width: 70%;
+    }
+  }
+  .case-study-desktop-image {
+    order: 1;
+    margin: -15px 0;
+    img {
+      border-radius: 12px;
+    }
+  }
+
+  .case-study-info-results {
+    order: 1;
+  }
+
+  .case-study-desktop-image-results {
+    order: 2;
+  }
+  ${breakpoint.md`
+  .case-study-content {
+
+display: flex;
+flex-direction: row;
+
+}
+
+
+.case-study-info {
+
+width: 50%;
+margin: 0 2%;
+order: 1;
+
+
+}
+
+.case-study-desktop-image {
+
+width: 50%;
+order: 2;
+
+}`}
 `
 
 const AnchorSpacingSpan = styled.span`
@@ -100,7 +150,8 @@ const ProjectSection = styled.section`
   padding: 1rem 0;
   margin-bottom: 0.5rem;
   a {
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: ${colors.brandSecondary};
       color: ${colors.brandWhite};
     }

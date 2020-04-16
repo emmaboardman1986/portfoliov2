@@ -23,7 +23,7 @@ export default () => {
     {
       sectionTitle: "Projects",
       sectionContent:
-        "<ul><li><h3><a href='/projects/adventures-in-accessibility'>Adventures in Accessibility</a></h3><p>HTML5, Vanilla JS, React</p></li><li><h3><a href='/projects/nihongo-scotland'>Nihongo Scotland</a></h3><p>React, Styled Components, SCSS, Gatsby, Prismic</p></li></ul>",
+        "<ul><li><h3><a href='/projects/adventures-in-accessibility'>Adventures in Accessibility</a></h3><p>Semantic HTML, Vanilla JS, React</p></li><li><h3><a href='/projects/nihongo-scotland'>Nihongo Scotland</a></h3><p>React, Styled Components, SCSS, Gatsby, Prismic</p></li></ul>",
       sectionLink: "projects",
       sectionLinkText: "See all",
       sectionContentType: "data chunk list",
@@ -48,7 +48,7 @@ export default () => {
 
   return (
     <Layout>
-      <h1 className="visually-hidden">Emma Boardman, UX and Front-end development Portfolio</h1>
+      <h1 className="visually-hidden">Emma Boardman, Front-end & UX development Portfolio</h1>
       <Carousel>
         <SkillsStack color={colors.limeMedium} skills={dailyUseSkills} skillAnnotation="Day to Day"/>
         <SkillsStack color={colors.lilacMedium} skills={sideProjectSkills} skillAnnotation="Side Projects" />
