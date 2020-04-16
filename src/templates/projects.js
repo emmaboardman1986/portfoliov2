@@ -81,15 +81,28 @@ const ProjectMain = styled.main`
   ${setFlex()};
   ${breakpoint.md`
   margin-top: 0;`}
+  .muted {
+    font-size: 0.8rem;
+    color: black;
+    margin-top: 0.25rem;
+  }
   .case-study-content {
     display: flex;
     flex-direction: column;
+    padding-top: 1rem;
   }
   .case-study-info {
     margin-bottom: 2%;
     order: 2;
     img {
       width: 70%;
+      margin-top: 1rem;
+    }
+    li {
+      color: #001759;
+    }
+    u {
+      margin-bottom: 1rem;
     }
   }
   .case-study-desktop-image {
