@@ -22,7 +22,7 @@ My explorations into building an accessible accordion. First in HTML & Vanilla E
 
 ## My accessibility checklist
 
-This list was created based on the published advice of accessibility experts and standards groups.  I do not pretend to have met all user cases, and my testing is me, with a mac screen reader.  
+This list was created based on the published advice of accessibility experts and standards groups. Initial testing was conducted by myself, using built-in Android, Mac, and iOS, and Windows accessibility tooling
 
 **This is not, and is not intended to act as, a replacement for diverse user testing.**
 
@@ -51,12 +51,12 @@ This list was created based on the published advice of accessibility experts and
  <Accordion>
         <div title="Signalling functionality for keyboard users #1">
           <h4>Feature:</h4>
-          <p>Title contains a button nested in an h2 element.</p>
+          <p>The title is a heading element, with a button nested inside.</p>
           <h4>Rationale:</h4>
           <p>
             Using a button element affords us the default interactivity - it is
             focusable, and it has default keybindings (activation on space or
-            enter). Nested the button within the heading results in (most)
+            enter). Nesting the button within the heading results in (most)
             screen readers announcing the heading text alongside the button.
             This aids comprehension.
           </p>
@@ -80,7 +80,7 @@ This list was created based on the published advice of accessibility experts and
   <div title="Signalling functionality for keyboard users #2">
           <h4>Feature:</h4>
           <p>
-            Button has an aria-expanded attribute, content has a hidden
+            The button has an aria-expanded attribute, the accordion content has a hidden
             attribute.
           </p>
           <h4>Rationale:</h4>
@@ -126,7 +126,7 @@ This list was created based on the published advice of accessibility experts and
         </div>
         <div title="Signalling functionality to sighted users #2">
           <h4>Feature:</h4>
-          <p>Applying an SVG focus style</p>
+          <p>The SVG has a specificed focus style</p>
           <h4>Rationale:</h4>
           <p>
             The button is set to inherit all styles from its parent - this

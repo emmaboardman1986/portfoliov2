@@ -11,10 +11,11 @@ export default ({ data }) => {
         <h1>Personal Projects</h1>
         <PagesIndex>
           {data.allProjectsJson.edges.map(({ node }) => (
-            <li key={node.id} style={{marginBottom: '1rem'}}>
+            <li key={node.id} style={{ marginBottom: "1rem" }}>
               <h2>
                 <a href={`/projects/${node.slug}`}>{node.title}</a>
               </h2>
+
               <p>{node.tags}</p>
             </li>
           ))}
@@ -32,6 +33,7 @@ export const query = graphql`
           slug
           title
           tags
+          date
           overviewtldr
           overview
           ux

@@ -10,12 +10,21 @@ export default () => {
       <Section>
         <Heading variant="h1" text="About Me"></Heading>
         <BodyText>
-          I am a Front-End Developer, currently based in Edinburgh, Scotland.
+          I am a Front-End Developer with a passion for UX and a commitment to
+          accessibility.
         </BodyText>
         <BodyText>
-          I have depth of discipline expertise in HTML,
-          CSS, vanilla Javascript, React, UX and accessibility best practice.{" "} 
-          I have a breadth of cross-discipline competence in project management, QA engineering, and back-end technologies. 
+          {" "}
+          I currently work for a fintech start-up in Edinburgh, Scotland. My
+          team are responsible for building bespoke client sites for our
+          white-label investment platform, and rebuilding our back-office UI in
+          React.
+        </BodyText>
+        <BodyText>
+          I have depth of discipline expertise in HTML, CSS, vanilla Javascript,
+          React, UX and accessibility best practice. I have a breadth of
+          cross-discipline competence in project management, QA engineering, and
+          back-end technologies.
         </BodyText>
         <BodyText>
           In a previous career, I was a Japanese Translator and Interpreter,
@@ -35,8 +44,8 @@ export default () => {
           specialising in Magento e-commerce builds. The role allowed me
           hand-ons and in-depth experience of each phase in the web development
           life-cycle. This included pitching to prospective clients,
-          requirements gathering, scope writing, UX, design reviews, sprint
-          planning and review, testing, and client communications.
+          requirements gathering, scope writing, UX audits, design reviews,
+          sprint planning and review, testing, and client communications.
         </BodyText>
 
         <BodyText>
@@ -49,9 +58,7 @@ export default () => {
         <BodyText>
           In 2018, I enrolled on the Edinburgh Napier University MSc in Web
           Development. I began working as a junior front-end developer for a
-          fintech start-up in Edinburgh in September 2019. My team are
-          responsible for building bespoke client sites for our white-label
-          investment platform, and rebuilding our back-office UI in React.
+          fintech start-up in Edinburgh in September 2019.
         </BodyText>
       </Section>
     </Layout>

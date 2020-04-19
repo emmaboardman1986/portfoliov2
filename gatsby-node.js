@@ -53,6 +53,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             slug
             title
             tags
+            date
             overviewtldr
             overview
             ux
@@ -73,6 +74,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         slug: node.slug,
         title: node.title,
         tags: node.tags,
+        date: node.date,
         challenge: node.challenge,
         slug: node.slug,
         title: node.title,

@@ -26,6 +26,7 @@ const Layout = ({ children }) => {
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <title>Emma Boardman: Front-End & UX Development</title>
       </Helmet>
       <Header
         isMenuExpanded={isMenuExpanded}

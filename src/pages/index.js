@@ -8,7 +8,7 @@ import * as colors from "../utils/colors"
 
 export default () => {
   const dailyUseSkills = ["JavaScript", "HTML & CSS", "Accessibility"]
-  const sideProjectSkills = ["Performance", "User Testing", "User Research"]
+  const sideProjectSkills = ["Performance", "Content Strategy", "User Research"]
   const wipSkills = ["UI Design", "Darts", "Technical Writing"]
 
   const sectionContent = [
@@ -25,7 +25,7 @@ export default () => {
       sectionContent:
         "<ul><li><h3><a href='/projects/adventures-in-accessibility'>Adventures in Accessibility</a></h3><p>Semantic HTML, Vanilla JS, React</p></li><li><h3><a href='/projects/nihongo-scotland'>Nihongo Scotland</a></h3><p>React, Styled Components, SCSS, Gatsby, Prismic</p></li></ul>",
       sectionLink: "projects",
-      sectionLinkText: "See all",
+      sectionLinkText: "Show all",
       sectionContentType: "data chunk list",
     },
     {
@@ -33,7 +33,7 @@ export default () => {
       sectionContent:
         "<ul><li><h3><a href='/blog/accessible-accordions/'>Accessible Accordions</a></h3><p>Accessibility, Semantic HTML, Vanilla JS, React</p></li><li><h3><a href='/blog/accessible-custom-radio-buttons'>Accessible, custom-styled Radio Buttons</a></h3><p>Accessibility, Semantic HTML, no JS, React</p></li></ul>",
       sectionLink: "blog",
-      sectionLinkText: "See all",
+      sectionLinkText: "Show all",
       sectionContentType: "data chunk list",
     },
     {
