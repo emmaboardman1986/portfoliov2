@@ -19,10 +19,10 @@ My explorations into building accessible, custom-styled file upload functionalit
 - [HTML & ES6 CodeSandbox](https://codesandbox.io/s/accessible-custom-styled-file-input-vanilla-js-fw6b8?file=/index.html)
 - [React CodeSandbox](https://codesandbox.io/s/accessible-custom-styled-file-input-react-r3h91?file=/src/Form/FileUpload.js)
 
-> Disclaimer: The internet is full of articles on accessible, custom-styled file upload buttons. This post does not attempt to reinvent the wheel. It is my personal exploration of what is required to make the key components of the web inclusive and accessible.
+> Disclaimer: The internet is full of wonderful articles on accessible, custom-styled file upload buttons. This post does not attempt to reinvent the wheel. It is my personal exploration of what is required to make the key components of the web inclusive and accessible.
 
 <BodyText>
-So as to not overload the content per post, this post will focus on Version 1, as described by the image below:
+This post will focus on simple functionality alongside custom-styling. The image below outlines the functionality. 
 </BodyText>  
 
 ![Version 1 of the implementation - 0 files input does not change the button text; 1 file input changes the button text to display the file name; 1+ file inputs changes the button text to display the number of files, without the file names](../../../static/assets/accessible-file-upload--v1.jpg)
@@ -31,7 +31,7 @@ So as to not overload the content per post, this post will focus on Version 1, a
 </BodyText>
 <BodyText>
   {" "}
-  A follow-up blog-post will focus on expanding this initial semantic mark-up into a more integrated JavaScript solution, shown as Version 2 below:
+  A follow-up blog-post will focus on expanding this functionality to create a more complex visual solution. The image below outlines the functionality:
 </BodyText>  
 
 ![Version 2 of the implementation - 0 files input does not change the button text; 1 file input displays in a separate UI element containing the file name, individual file deletion is enabled via a cross icon; 1+ file inputs display in 1+ separate UI elements containing the respective file names, individual file deletion is enabled via a cross icon](../../../static/assets/accessible-file-upload--v2.jpg)
