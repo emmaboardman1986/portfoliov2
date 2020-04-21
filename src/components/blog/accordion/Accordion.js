@@ -82,11 +82,6 @@ const AccordionMain = styled.div`
   margin: 0.75rem 0;
 `
 
-export const setPressed = () => {
-  return `box-shadow: inset 0 0 0 0.15rem #000, 
-  inset 0.25em 0.25em 0 #fff;`
-}
-
 const AccordionToggle = styled.button`
   border-radius: 3px;
   border: 2px solid ${colors.brandSecondary};

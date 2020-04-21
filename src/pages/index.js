@@ -31,7 +31,7 @@ export default () => {
     {
       sectionTitle: "Blog",
       sectionContent:
-        "<ul><li><h3><a href='/blog/accessible-accordions/'>Accessible Accordions</a></h3><p>Accessibility, Semantic HTML, Vanilla JS, React</p></li><li><h3><a href='/blog/accessible-custom-radio-buttons'>Accessible, custom-styled Radio Buttons</a></h3><p>Accessibility, Semantic HTML, no JS, React</p></li></ul>",
+        "<ul><li><h3><a href='blog/accessible-custom-file-upload--v1/'>Accessible, custom-styled File Uploads</a></h3><p>Accessibility, Semantic HTML, Vanilla JS, React</p></li><li><h3><a href='/blog/accessible-custom-radio-buttons'>Accessible, custom-styled Radio Buttons</a></h3><p>Accessibility, Semantic HTML, no JS, React</p></li></ul>",
       sectionLink: "blog",
       sectionLinkText: "Show all",
       sectionContentType: "data chunk list",

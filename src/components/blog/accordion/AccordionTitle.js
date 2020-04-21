@@ -28,8 +28,7 @@ const AccordionTitleWrapper = styled.div`
   border-bottom: 2px solid ${colors.brandSecondary};
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
-  background-color: ${props =>
-    props.expanded ? colors.brandSecondaryDark : colors.brandPrimary};
+  background-color: transparent;
   padding: 0.5rem;
 `
 

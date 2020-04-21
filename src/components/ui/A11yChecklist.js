@@ -6,6 +6,7 @@ import { breakpoint } from "../../utils/breakpoints"
 const A11yChecklist = ({ children }) => {
   return (
     <A11yChecklistWrapper>
+      <h3 class="visually-hidden">Accessibility Checklist</h3>
       <ul>
         <li>Can be operated by a mouse click.</li>
         <li>Can be operated by touch</li>
@@ -55,6 +56,10 @@ const A11yChecklist = ({ children }) => {
           </ul>
         </li>
       </ul>
+      <aside>
+      <h3>Accessibility Checklist References</h3><a href="https://romeo.elsevier.com/accessibility_checklist" target="_blank">Elsevier Accessibility Checklist</a>;  <a href="https://www.w3.org/TR/wai-aria-practices/" target="_blank">WAI-ARIA Authoring Practices 1.1</a>;   <a href="https://inclusive-components.design/" target="_blank">Heydon Pickering's Inclusive Components</a>;  <a href="https://www.hassellinclusion.com/blog/" target="_blank">Hassell Inclusion Blog</a>; <a href="https://w3c.github.io/html-aria/" target="_blank">W3C Editor's Draft: ARIA in HTML</a>
+
+      </aside>
     </A11yChecklistWrapper>
   )
 }
@@ -79,6 +84,18 @@ const A11yChecklistWrapper = styled.div`
         list-style: circle;
       }
     }
+  }
+  aside {
+    margin: 1rem;
+    font-family: "BC-Falster-Grotesk-Regular", Arial;
+    padding: 1rem;
+    line-height: 1.4rem;
+    background-color: ${colors.brandWhite};
+    border: 1px dashed ${colors.brandSecondary};
+    h3 {
+      margin: 0.5rem 0;
+    }
+
   }
   ${breakpoint.md`
   width: 70%;

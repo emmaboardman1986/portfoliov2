@@ -22,7 +22,7 @@ My explorations into building accessible, custom-styled radio buttons. First in 
 
 ## My accessibility checklist
 
-This list was created based on the published advice of accessibility experts and standards groups. Initial testing was conducted by myself, using built-in Android, Mac, and iOS, and Windows accessibility tooling
+This list was created based on the published advice of accessibility experts and standards groups. Initial testing was conducted by myself, using built-in Android and Mac accessibility tooling
 
 **This is not, and is not intended to act as, a replacement for diverse user testing.**
 
@@ -34,7 +34,7 @@ This list was created based on the published advice of accessibility experts and
   <fieldset>
         <legend>Allow 3rd party cookies</legend>
         <input type="radio" id="3rd-party-on" name="3rd-party" value="on" />
-        <label for="3rd-party-on">on</label>
+        <label for="3rd-party-on"><span>on</span></label>
         <input
           type="radio"
           id="3rd-party-off"
@@ -42,7 +42,7 @@ This list was created based on the published advice of accessibility experts and
           value="off"
           checked
         />
-        <label for="3rd-party-off">off</label>
+        <label for="3rd-party-off"><span>off</span></label>
       </fieldset>
 ```
 

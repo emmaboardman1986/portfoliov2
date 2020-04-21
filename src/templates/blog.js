@@ -85,6 +85,9 @@ const Post = styled.div`
     margin-left: auto;
     margin-right: auto;`}
   }
+  img {
+    margin: 1rem 0 !important;
+  }
 `
 
 export const pageQuery = graphql`
