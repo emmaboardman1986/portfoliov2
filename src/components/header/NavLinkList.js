@@ -15,9 +15,7 @@ const NavLinkListWrapper = styled.ul`
   background-color: ${colors.brandWhite};
   display: flex;
   flex-direction: column;
-  /* fallback height for safari */
-  height: 90vh;
-  height: calc(100vh - 70px);
+  height: calc(100% - 70px);
   position: fixed;
   z-index: 200;
   bottom: 0;
