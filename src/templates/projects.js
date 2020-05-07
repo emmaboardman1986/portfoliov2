@@ -108,7 +108,7 @@ const ProjectMain = styled.main`
   .case-study-desktop-image {
     display: flex;
     flex-direction: column;
-  
+
     order: 1;
     margin: -15px 0;
     img {
@@ -165,6 +165,7 @@ const AnchorSpacingSpan = styled.span`
 `
 
 const ProjectSection = styled.section`
+width: 100%;
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
@@ -235,7 +236,9 @@ const ProjectOverviewTLDR = styled(ProjectContentBlock)`
 `
 
 const ProjectUX = styled(ProjectContentBlock)``
+
 const ProjectA11y = styled(ProjectContentBlock)``
+
 const ProjectResult = styled(ProjectContentBlock)``
 
 export const query = graphql`
