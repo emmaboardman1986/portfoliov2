@@ -9,7 +9,7 @@ const BurgerButton = ({ isMenuExpanded, setIsMenuExpanded }) => {
       isMenuExpanded={isMenuExpanded}
       aria-expanded={isMenuExpanded}
       onClick={() => setIsMenuExpanded(!isMenuExpanded)}
-    >
+    ><span className="visually-hidden">Toggle Navigation Menu</span>
       <span></span>
       <span></span>
       <span></span>

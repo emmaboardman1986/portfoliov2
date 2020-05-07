@@ -9,7 +9,9 @@ const CarouselControl = ({ direction, onClick }) => {
     <CarouselControlWrapper
       direction={direction}
       onClick={onClick}
-    ></CarouselControlWrapper>
+    >
+      <span className="visually-hidden">See {direction} carousel item</span>
+    </CarouselControlWrapper>
   )
 }
 
