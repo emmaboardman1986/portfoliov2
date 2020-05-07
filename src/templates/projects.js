@@ -106,10 +106,17 @@ const ProjectMain = styled.main`
     }
   }
   .case-study-desktop-image {
+    display: flex;
+    flex-direction: column;
+  
     order: 1;
     margin: -15px 0;
     img {
       border-radius: 12px;
+      align-self: center;
+      ${breakpoint.sm`
+      align-self: flex-start;`}
+      margin-bottom: 0.5rem;
     }
   }
 
