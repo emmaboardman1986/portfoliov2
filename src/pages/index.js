@@ -47,30 +47,31 @@ export default () => {
   ]
 
   return (
-    <Layout>
-      <h1 className="visually-hidden">Emma Boardman, Front-end & UX development Portfolio</h1>
-      <Carousel>
-        <SkillsStack color={colors.limeMedium} skills={dailyUseSkills} skillAnnotation="Day to Day"/>
-        <SkillsStack color={colors.lilacMedium} skills={sideProjectSkills} skillAnnotation="Side Projects" />
-        <SkillsStack color={colors.blueMedium} skills={wipSkills} skillAnnotation="Work in Progress"/>
-      </Carousel>
-      <Hero>
-        <SkillsStack color={colors.limeMedium} skills={dailyUseSkills} skillAnnotation="Day to Day" />
-        <SkillsStack color={colors.lilacMedium} skills={sideProjectSkills} skillAnnotation="Side Projects"  />
-        <SkillsStack color={colors.blueMedium} skills={wipSkills} skillAnnotation="Work in Progress"/>
-      </Hero>
+    <p>Nothing to see here.</p>
+    // <Layout>
+    //   <h1 className="visually-hidden">Emma Boardman, Front-end & UX development Portfolio</h1>
+    //   <Carousel>
+    //     <SkillsStack color={colors.limeMedium} skills={dailyUseSkills} skillAnnotation="Day to Day"/>
+    //     <SkillsStack color={colors.lilacMedium} skills={sideProjectSkills} skillAnnotation="Side Projects" />
+    //     <SkillsStack color={colors.blueMedium} skills={wipSkills} skillAnnotation="Work in Progress"/>
+    //   </Carousel>
+    //   <Hero>
+    //     <SkillsStack color={colors.limeMedium} skills={dailyUseSkills} skillAnnotation="Day to Day" />
+    //     <SkillsStack color={colors.lilacMedium} skills={sideProjectSkills} skillAnnotation="Side Projects"  />
+    //     <SkillsStack color={colors.blueMedium} skills={wipSkills} skillAnnotation="Work in Progress"/>
+    //   </Hero>
 
-      {sectionContent.map((section, index) => (
-        <SectionBanner
-          key={index}
-          layoutOrder={index % 2 === 0 ? "even" : "odd"}
-          title={section.sectionTitle}
-          content={section.sectionContent}
-          contentType={section.sectionContentType}
-          link={section.sectionLink}
-          linkText={section.sectionLinkText}
-        />
-      ))}
-    </Layout>
+    //   {sectionContent.map((section, index) => (
+    //     <SectionBanner
+    //       key={index}
+    //       layoutOrder={index % 2 === 0 ? "even" : "odd"}
+    //       title={section.sectionTitle}
+    //       content={section.sectionContent}
+    //       contentType={section.sectionContentType}
+    //       link={section.sectionLink}
+    //       linkText={section.sectionLinkText}
+    //     />
+    //   ))}
+    // </Layout>
   )
 }
